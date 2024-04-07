@@ -11,7 +11,7 @@ final class RouterBase: Router {
     
     private weak var rootController: UINavigationController?
     
-    init(rootController: UINavigationController) {
+    init(rootController: UINavigationController?) {
         self.rootController = rootController
     }
     
@@ -23,5 +23,9 @@ final class RouterBase: Router {
     func present(_ module: Presentable?) {
         guard let controller = module?.toPresent() else { return }
         rootController?.present(controller, animated: true)
+    }
+    
+    func dismiss(animated: Bool) {
+        rootController?.dismiss(animated: animated)
     }
 }

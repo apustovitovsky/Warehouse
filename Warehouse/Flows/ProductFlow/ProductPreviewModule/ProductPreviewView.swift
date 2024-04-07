@@ -7,22 +7,13 @@
 
 import UIKit
 
-protocol GreenScreenPreviewViewControllerInput: UIViewController {
+
+protocol ProductPreviewViewInput: AnyObject {
     func updateTitle(with: String)
 }
 
-class GreenScreenPreviewViewController: UIViewController {
-    
-    let presenter: GreenScreenPreviewPresenterInput
-    
-    init(presenter: GreenScreenPreviewPresenterInput) {
-        self.presenter = presenter
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
+final class ProductPreviewView: View<ProductPreviewPresenterInput> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +28,12 @@ class GreenScreenPreviewViewController: UIViewController {
     }
     
     @objc func buttonTapped() {
-        presenter.detailsTapped()
+        presenter?.detailsTapped()
     }
 }
 
-extension GreenScreenPreviewViewController: GreenScreenPreviewViewControllerInput {
+
+extension ProductPreviewView: ProductPreviewViewInput {
     
     func updateTitle(with suffix: String) {
         self.view.backgroundColor = .red

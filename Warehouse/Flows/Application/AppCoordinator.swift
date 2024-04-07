@@ -8,9 +8,10 @@
 import UIKit
 
 
-final class AppCoordinator: CoordinatorBase {
+final class AppCoordinator: Coordinator {
 
     private var router: Router?
+    private let coordinatorFactory = CoordinatorFactory()
     
     struct Dependencies {
         let router: Router?
@@ -21,17 +22,23 @@ final class AppCoordinator: CoordinatorBase {
     }
     
     override func start() {
-        pushGreenScreen()
+        pushProductScreen()
     }
     
-    private func pushGreenScreen() {
-        let coordinator = GreenScreenCoordinator(router: router)
-        add(coordinator)
-        coordinator.start()
-    }
+//    private func pushGreenScreen() {
+//        let coordinator = ProductCoordinator(router: router)
+//        add(coordinator)
+//        coordinator.start()
+//    }
     
-    private func pushRedScreen() {
-        let coordinator = GreenScreenCoordinator(router: router)
+    private func pushProductScreen() {
+        let coordinator = coordinatorFactory.makeProductDetailsCoordinator(router: router)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            
+            self?.router?.dismiss(animated: true)
+            self?.remove(coordinator)
+        }
+
         add(coordinator)
         coordinator.start()
     }

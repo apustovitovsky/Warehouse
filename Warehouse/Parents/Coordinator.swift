@@ -8,18 +8,18 @@
 import Foundation
 
 
-class CoordinatorBase: Coordinator {
+class Coordinator: Flow {
     
-    private var childs: [Coordinator] = []
+    var childs: [Flow] = []
     
     func start() {}
     
-    func add(_ coordinator: Coordinator) {
+    func add(_ coordinator: Flow) {
         guard !childs.contains(where: { $0 === coordinator }) else { return }
         childs.append(coordinator)
     }
     
-    func remove(_ coordinator: Coordinator) {
+    func remove(_ coordinator: Flow?) {
         childs = childs.filter{ $0 !== coordinator }
     }
 }
