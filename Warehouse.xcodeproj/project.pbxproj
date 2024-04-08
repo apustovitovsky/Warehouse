@@ -11,22 +11,24 @@
 		8A0BB87C2BC17C5600AF7326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A0BB87B2BC17C5600AF7326 /* Assets.xcassets */; };
 		8A0BB87F2BC17C5600AF7326 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8A0BB87E2BC17C5600AF7326 /* Base */; };
 		8A0BB8892BC17F3300AF7326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB8882BC17F3300AF7326 /* SceneDelegate.swift */; };
-		8A0BB8902BC1829100AF7326 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB88F2BC1829100AF7326 /* Flow.swift */; };
 		8A0BB8922BC18F1A00AF7326 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB8912BC18F1A00AF7326 /* Coordinator.swift */; };
 		8A0BB8942BC18F8900AF7326 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB8932BC18F8900AF7326 /* AppCoordinator.swift */; };
-		8AF23EE92BC1B189008A3944 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EE82BC1B189008A3944 /* Presentable.swift */; };
-		8AF23EEC2BC1B1D3008A3944 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EEB2BC1B1D3008A3944 /* Router.swift */; };
-		8AF23EEE2BC1B782008A3944 /* RouterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EED2BC1B782008A3944 /* RouterBase.swift */; };
-		8AF23EF12BC1C0BB008A3944 /* ProductCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EF02BC1C0BB008A3944 /* ProductCoordinator.swift */; };
-		8AF23EF82BC1EFDE008A3944 /* ProductPreviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EF72BC1EFDE008A3944 /* ProductPreviewPresenter.swift */; };
-		8AF23EFA2BC1F0EA008A3944 /* ProductDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EF92BC1F0EA008A3944 /* ProductDetailsPresenter.swift */; };
-		8AF23EFC2BC1F3B1008A3944 /* ProductPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EFB2BC1F3B1008A3944 /* ProductPreviewView.swift */; };
-		8AF23EFE2BC1F3E3008A3944 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EFD2BC1F3E3008A3944 /* ProductDetailsView.swift */; };
+		8AF23EE92BC1B189008A3944 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EE82BC1B189008A3944 /* Module.swift */; };
+		8AF23EEC2BC1B1D3008A3944 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EEB2BC1B1D3008A3944 /* Routable.swift */; };
+		8AF23EEE2BC1B782008A3944 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EED2BC1B782008A3944 /* Router.swift */; };
 		8AF23F032BC2A1AC008A3944 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F022BC2A1AC008A3944 /* View.swift */; };
 		8AF23F052BC2A2EB008A3944 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F042BC2A2EB008A3944 /* Presenter.swift */; };
-		8AF23F092BC337DF008A3944 /* ProductCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F082BC337DF008A3944 /* ProductCoordinatorOutput.swift */; };
-		8AF23F0C2BC349A4008A3944 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F0B2BC349A4008A3944 /* CoordinatorFactory.swift */; };
-		8AF23F0E2BC34D87008A3944 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F0D2BC34D87008A3944 /* ModuleFactory.swift */; };
+		8AF23F112BC409D6008A3944 /* WelcomeScreenCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F102BC409D6008A3944 /* WelcomeScreenCoordinatorOutput.swift */; };
+		8AF23F132BC40A0C008A3944 /* WelcomeScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F122BC40A0C008A3944 /* WelcomeScreenCoordinator.swift */; };
+		8AF23F162BC40BBE008A3944 /* WelcomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F152BC40BBE008A3944 /* WelcomeScreenPresenter.swift */; };
+		8AF23F182BC40BCC008A3944 /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F172BC40BCC008A3944 /* WelcomeScreenView.swift */; };
+		8AF23F1C2BC4447E008A3944 /* WelcomeScreenCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F1B2BC4447E008A3944 /* WelcomeScreenCoordinatorFactory.swift */; };
+		8AF23F1E2BC44B39008A3944 /* WelcomeScreenModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F1D2BC44B39008A3944 /* WelcomeScreenModuleFactory.swift */; };
+		8AF23F202BC44F42008A3944 /* WelcomeScreenModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F1F2BC44F42008A3944 /* WelcomeScreenModuleOutput.swift */; };
+		8AF23F222BC4575F008A3944 /* AppCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F212BC4575F008A3944 /* AppCoordinatorFactory.swift */; };
+		8AF23F292BC4688C008A3944 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F282BC4688C008A3944 /* MainTabBarCoordinator.swift */; };
+		8AF23F2B2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F2A2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift */; };
+		8AF23F2D2BC46F97008A3944 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F2C2BC46F97008A3944 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,22 +38,24 @@
 		8A0BB87E2BC17C5600AF7326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A0BB8802BC17C5600AF7326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A0BB8882BC17F3300AF7326 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A0BB88F2BC1829100AF7326 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		8A0BB8912BC18F1A00AF7326 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8A0BB8932BC18F8900AF7326 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		8AF23EE82BC1B189008A3944 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
-		8AF23EEB2BC1B1D3008A3944 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		8AF23EED2BC1B782008A3944 /* RouterBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBase.swift; sourceTree = "<group>"; };
-		8AF23EF02BC1C0BB008A3944 /* ProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoordinator.swift; sourceTree = "<group>"; };
-		8AF23EF72BC1EFDE008A3944 /* ProductPreviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPreviewPresenter.swift; sourceTree = "<group>"; };
-		8AF23EF92BC1F0EA008A3944 /* ProductDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsPresenter.swift; sourceTree = "<group>"; };
-		8AF23EFB2BC1F3B1008A3944 /* ProductPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPreviewView.swift; sourceTree = "<group>"; };
-		8AF23EFD2BC1F3E3008A3944 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		8AF23EE82BC1B189008A3944 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		8AF23EEB2BC1B1D3008A3944 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		8AF23EED2BC1B782008A3944 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8AF23F022BC2A1AC008A3944 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8AF23F042BC2A2EB008A3944 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		8AF23F082BC337DF008A3944 /* ProductCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoordinatorOutput.swift; sourceTree = "<group>"; };
-		8AF23F0B2BC349A4008A3944 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
-		8AF23F0D2BC34D87008A3944 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		8AF23F102BC409D6008A3944 /* WelcomeScreenCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenCoordinatorOutput.swift; sourceTree = "<group>"; };
+		8AF23F122BC40A0C008A3944 /* WelcomeScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenCoordinator.swift; sourceTree = "<group>"; };
+		8AF23F152BC40BBE008A3944 /* WelcomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenPresenter.swift; sourceTree = "<group>"; };
+		8AF23F172BC40BCC008A3944 /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
+		8AF23F1B2BC4447E008A3944 /* WelcomeScreenCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8AF23F1D2BC44B39008A3944 /* WelcomeScreenModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenModuleFactory.swift; sourceTree = "<group>"; };
+		8AF23F1F2BC44F42008A3944 /* WelcomeScreenModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenModuleOutput.swift; sourceTree = "<group>"; };
+		8AF23F212BC4575F008A3944 /* AppCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8AF23F282BC4688C008A3944 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		8AF23F2A2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8AF23F2C2BC46F97008A3944 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +90,6 @@
 			children = (
 				8A0BB8872BC17CCE00AF7326 /* Application */,
 				8AF23EF62BC1EE8C008A3944 /* Extensions */,
-				8AF23F0A2BC3483D008A3944 /* Factories */,
 				8AF23EEA2BC1B190008A3944 /* Protocols */,
 				8A0BB88E2BC1828300AF7326 /* Parents */,
 				8A0BB88A2BC180BF00AF7326 /* Flows */,
@@ -118,7 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				8AF23EFF2BC1FCF1008A3944 /* Application */,
-				8AF23EEF2BC1C0A2008A3944 /* ProductFlow */,
+				8AF23F242BC46721008A3944 /* Overview */,
+				8AF23F252BC467A6008A3944 /* Sessions */,
+				8AF23F262BC467BD008A3944 /* Progress */,
+				8AF23F272BC467C6008A3944 /* Settings */,
+				8AF23F232BC4670D008A3944 /* MainTabBar */,
+				8AF23F0F2BC40960008A3944 /* WelcomeScreen */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -129,7 +137,7 @@
 				8AF23F022BC2A1AC008A3944 /* View.swift */,
 				8AF23F042BC2A2EB008A3944 /* Presenter.swift */,
 				8A0BB8912BC18F1A00AF7326 /* Coordinator.swift */,
-				8AF23EED2BC1B782008A3944 /* RouterBase.swift */,
+				8AF23EED2BC1B782008A3944 /* Router.swift */,
 			);
 			path = Parents;
 			sourceTree = "<group>";
@@ -137,40 +145,10 @@
 		8AF23EEA2BC1B190008A3944 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				8AF23EE82BC1B189008A3944 /* Presentable.swift */,
-				8A0BB88F2BC1829100AF7326 /* Flow.swift */,
-				8AF23EEB2BC1B1D3008A3944 /* Router.swift */,
+				8AF23EE82BC1B189008A3944 /* Module.swift */,
+				8AF23EEB2BC1B1D3008A3944 /* Routable.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		8AF23EEF2BC1C0A2008A3944 /* ProductFlow */ = {
-			isa = PBXGroup;
-			children = (
-				8AF23F082BC337DF008A3944 /* ProductCoordinatorOutput.swift */,
-				8AF23EF02BC1C0BB008A3944 /* ProductCoordinator.swift */,
-				8AF23EF52BC1D6F3008A3944 /* ProductPreviewModule */,
-				8AF23EF42BC1D6E1008A3944 /* ProductDetailsModule */,
-			);
-			path = ProductFlow;
-			sourceTree = "<group>";
-		};
-		8AF23EF42BC1D6E1008A3944 /* ProductDetailsModule */ = {
-			isa = PBXGroup;
-			children = (
-				8AF23EF92BC1F0EA008A3944 /* ProductDetailsPresenter.swift */,
-				8AF23EFD2BC1F3E3008A3944 /* ProductDetailsView.swift */,
-			);
-			path = ProductDetailsModule;
-			sourceTree = "<group>";
-		};
-		8AF23EF52BC1D6F3008A3944 /* ProductPreviewModule */ = {
-			isa = PBXGroup;
-			children = (
-				8AF23EF72BC1EFDE008A3944 /* ProductPreviewPresenter.swift */,
-				8AF23EFB2BC1F3B1008A3944 /* ProductPreviewView.swift */,
-			);
-			path = ProductPreviewModule;
 			sourceTree = "<group>";
 		};
 		8AF23EF62BC1EE8C008A3944 /* Extensions */ = {
@@ -183,18 +161,70 @@
 		8AF23EFF2BC1FCF1008A3944 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				8AF23F212BC4575F008A3944 /* AppCoordinatorFactory.swift */,
 				8A0BB8932BC18F8900AF7326 /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		8AF23F0A2BC3483D008A3944 /* Factories */ = {
+		8AF23F0F2BC40960008A3944 /* WelcomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8AF23F0B2BC349A4008A3944 /* CoordinatorFactory.swift */,
-				8AF23F0D2BC34D87008A3944 /* ModuleFactory.swift */,
+				8AF23F1B2BC4447E008A3944 /* WelcomeScreenCoordinatorFactory.swift */,
+				8AF23F102BC409D6008A3944 /* WelcomeScreenCoordinatorOutput.swift */,
+				8AF23F122BC40A0C008A3944 /* WelcomeScreenCoordinator.swift */,
+				8AF23F142BC40BA1008A3944 /* WelcomeScreenModule */,
 			);
-			path = Factories;
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		8AF23F142BC40BA1008A3944 /* WelcomeScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				8AF23F1D2BC44B39008A3944 /* WelcomeScreenModuleFactory.swift */,
+				8AF23F1F2BC44F42008A3944 /* WelcomeScreenModuleOutput.swift */,
+				8AF23F172BC40BCC008A3944 /* WelcomeScreenView.swift */,
+				8AF23F152BC40BBE008A3944 /* WelcomeScreenPresenter.swift */,
+			);
+			path = WelcomeScreenModule;
+			sourceTree = "<group>";
+		};
+		8AF23F232BC4670D008A3944 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8AF23F2C2BC46F97008A3944 /* MainTabBarController.swift */,
+				8AF23F2A2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift */,
+				8AF23F282BC4688C008A3944 /* MainTabBarCoordinator.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		8AF23F242BC46721008A3944 /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		8AF23F252BC467A6008A3944 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		8AF23F262BC467BD008A3944 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		8AF23F272BC467C6008A3944 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,24 +297,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AF23EF12BC1C0BB008A3944 /* ProductCoordinator.swift in Sources */,
-				8AF23EFA2BC1F0EA008A3944 /* ProductDetailsPresenter.swift in Sources */,
-				8AF23F0E2BC34D87008A3944 /* ModuleFactory.swift in Sources */,
-				8AF23EEC2BC1B1D3008A3944 /* Router.swift in Sources */,
-				8AF23EFC2BC1F3B1008A3944 /* ProductPreviewView.swift in Sources */,
-				8A0BB8902BC1829100AF7326 /* Flow.swift in Sources */,
+				8AF23F292BC4688C008A3944 /* MainTabBarCoordinator.swift in Sources */,
+				8AF23F182BC40BCC008A3944 /* WelcomeScreenView.swift in Sources */,
+				8AF23F2D2BC46F97008A3944 /* MainTabBarController.swift in Sources */,
+				8AF23F112BC409D6008A3944 /* WelcomeScreenCoordinatorOutput.swift in Sources */,
+				8AF23EEC2BC1B1D3008A3944 /* Routable.swift in Sources */,
+				8AF23F222BC4575F008A3944 /* AppCoordinatorFactory.swift in Sources */,
 				8A0BB8942BC18F8900AF7326 /* AppCoordinator.swift in Sources */,
+				8AF23F162BC40BBE008A3944 /* WelcomeScreenPresenter.swift in Sources */,
 				8AF23F032BC2A1AC008A3944 /* View.swift in Sources */,
-				8AF23EF82BC1EFDE008A3944 /* ProductPreviewPresenter.swift in Sources */,
-				8AF23EE92BC1B189008A3944 /* Presentable.swift in Sources */,
-				8AF23EEE2BC1B782008A3944 /* RouterBase.swift in Sources */,
+				8AF23EE92BC1B189008A3944 /* Module.swift in Sources */,
+				8AF23EEE2BC1B782008A3944 /* Router.swift in Sources */,
+				8AF23F202BC44F42008A3944 /* WelcomeScreenModuleOutput.swift in Sources */,
+				8AF23F1E2BC44B39008A3944 /* WelcomeScreenModuleFactory.swift in Sources */,
 				8AF23F052BC2A2EB008A3944 /* Presenter.swift in Sources */,
+				8AF23F132BC40A0C008A3944 /* WelcomeScreenCoordinator.swift in Sources */,
+				8AF23F2B2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift in Sources */,
 				8A0BB8922BC18F1A00AF7326 /* Coordinator.swift in Sources */,
-				8AF23EFE2BC1F3E3008A3944 /* ProductDetailsView.swift in Sources */,
 				8A0BB8732BC17C5400AF7326 /* AppDelegate.swift in Sources */,
-				8AF23F0C2BC349A4008A3944 /* CoordinatorFactory.swift in Sources */,
-				8AF23F092BC337DF008A3944 /* ProductCoordinatorOutput.swift in Sources */,
 				8A0BB8892BC17F3300AF7326 /* SceneDelegate.swift in Sources */,
+				8AF23F1C2BC4447E008A3944 /* WelcomeScreenCoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

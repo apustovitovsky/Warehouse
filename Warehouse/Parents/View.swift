@@ -8,8 +8,8 @@
 import UIKit
 
 
-class View<Presenter>: UIViewController {
+class View<PresenterType>: UIViewController {
     
-    var presenter: Presenter?
+    var presenter: PresenterType?
 }
 

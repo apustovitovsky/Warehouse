@@ -8,14 +8,16 @@
 import UIKit
 
 
-protocol Presentable: AnyObject {
+protocol Module: AnyObject {
+    
   func toPresent() -> UIViewController?
 }
 
 
-extension UIViewController: Presentable {
+extension UIViewController: Module {
   
   func toPresent() -> UIViewController? {
+      
     return self
   }
 }

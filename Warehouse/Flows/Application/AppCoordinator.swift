@@ -10,37 +10,47 @@ import UIKit
 
 final class AppCoordinator: Coordinator {
 
-    private var router: Router?
-    private let coordinatorFactory = CoordinatorFactory()
+    private let router: Router
+    private let coordinatorFactory: WelcomeScreenCoordinatorFactoryProtocol
+    private let moduleFactory: WelcomeScreenModuleFactoryProtocol
     
-    struct Dependencies {
-        let router: Router?
-    }
-    
-    init(dependencies: Dependencies) {
-        self.router = dependencies.router
+    init(router: Router,
+         coordinatorFactory: WelcomeScreenCoordinatorFactoryProtocol,
+         moduleFactory: WelcomeScreenModuleFactoryProtocol) {
+        self.router = router
+        self.coordinatorFactory = coordinatorFactory
+        self.moduleFactory = moduleFactory
     }
     
     override func start() {
-        pushProductScreen()
+        showMainTabBarFlow()
     }
     
-//    private func pushGreenScreen() {
-//        let coordinator = ProductCoordinator(router: router)
-//        add(coordinator)
-//        coordinator.start()
-//    }
+    private func showMainTabBarFlow() {
+        let (module, coordinator) = AppCoordinatorFactory().makeMainTabBarCoordinator()
+        add(coordinator)
+        router.setRoot(module, hideBar: true)
+        coordinator.start()
+    }
     
-    private func pushProductScreen() {
-        let coordinator = coordinatorFactory.makeProductDetailsCoordinator(router: router)
+    private func showWelcomeScreen() {
+        let (module, coordinator) = coordinatorFactory.makeWelcomeScreenCoordinator()
         coordinator.finishFlow = { [weak self, weak coordinator] in
             
-            self?.router?.dismiss(animated: true)
+            self?.router.dismiss(animated: true)
             self?.remove(coordinator)
+            print("completed")
         }
-
+        router.present(module)
         add(coordinator)
         coordinator.start()
     }
     
+    private func showHomeScreen() {
+        let module = moduleFactory.makeWelcomeScreenModule(backgroundColor: .lightGray)
+        module.finishModule = { [weak self] in
+            self?.showWelcomeScreen()
+        }
+        router.setRoot(module, hideBar: false)
+    }
 }
