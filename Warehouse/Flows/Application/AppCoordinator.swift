@@ -9,32 +9,45 @@ import UIKit
 
 
 final class AppCoordinator: Coordinator {
-
+    
     private let router: Router
-    private let coordinatorFactory: WelcomeScreenCoordinatorFactoryProtocol
-    private let moduleFactory: WelcomeScreenModuleFactoryProtocol
+    private let coordinatorFactory: AppCoordinatorFactoryProtocol
     
     init(router: Router,
-         coordinatorFactory: WelcomeScreenCoordinatorFactoryProtocol,
-         moduleFactory: WelcomeScreenModuleFactoryProtocol) {
+         coordinatorFactory: AppCoordinatorFactoryProtocol) {
         self.router = router
         self.coordinatorFactory = coordinatorFactory
-        self.moduleFactory = moduleFactory
     }
     
     override func start() {
-        showMainTabBarFlow()
+        showOnboarding()
+    }
+}
+
+
+private extension AppCoordinator {
+    
+    func showOnboarding() {
+        let coordinator = coordinatorFactory.makeOnboardingCoordinator(router: router)
+        
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.showMainTabBarFlow()
+            self?.remove(coordinator)
+        }
+        
+        add(coordinator)
+        coordinator.start()
     }
     
-    private func showMainTabBarFlow() {
+    func showMainTabBarFlow() {
         let (module, coordinator) = AppCoordinatorFactory().makeMainTabBarCoordinator()
         add(coordinator)
         router.setRoot(module, hideBar: true)
         coordinator.start()
     }
     
-    private func showWelcomeScreen() {
-        let (module, coordinator) = coordinatorFactory.makeWelcomeScreenCoordinator()
+    func showWelcomeScreen() {
+        let (module, coordinator) = WelcomeScreenCoordinatorFactory().makeWelcomeScreenCoordinator()
         coordinator.finishFlow = { [weak self, weak coordinator] in
             
             self?.router.dismiss(animated: true)
@@ -46,8 +59,8 @@ final class AppCoordinator: Coordinator {
         coordinator.start()
     }
     
-    private func showHomeScreen() {
-        let module = moduleFactory.makeWelcomeScreenModule(backgroundColor: .lightGray)
+    func showHomeScreen() {
+        let module = WelcomeScreenModuleFactory().makeWelcomeScreenModule(backgroundColor: .lightGray)
         module.finishModule = { [weak self] in
             self?.showWelcomeScreen()
         }

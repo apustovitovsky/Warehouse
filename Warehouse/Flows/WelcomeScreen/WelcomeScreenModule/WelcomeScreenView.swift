@@ -13,7 +13,7 @@ protocol WelcomeScreenViewInput: AnyObject {
 }
 
 
-final class WelcomeScreenView: View<WelcomeScreenPresenterInput> {
+final class WelcomeScreenView: ViewController<WelcomeScreenPresenterInput> {
     
     private let button: UIButton = {
         let button = UIButton()

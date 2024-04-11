@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 final class Router: Routable {
 
     private weak var rootController: UINavigationController?
@@ -21,6 +22,15 @@ final class Router: Routable {
             !(controller is UINavigationController) else { return }
         
         rootController?.pushViewController(controller, animated: true)
+    }
+    
+    func push(_ module: Module?, animated: Bool, hideBottomBar: Bool) {
+        guard
+            let controller = module?.toPresent(),
+            !(controller is UINavigationController) else { return }
+        
+        controller.hidesBottomBarWhenPushed = hideBottomBar
+        rootController?.pushViewController(controller, animated: animated)
     }
     
     func present(_ module: Module?) {

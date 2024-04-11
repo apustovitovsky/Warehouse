@@ -13,10 +13,24 @@
 		8A0BB8892BC17F3300AF7326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB8882BC17F3300AF7326 /* SceneDelegate.swift */; };
 		8A0BB8922BC18F1A00AF7326 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB8912BC18F1A00AF7326 /* Coordinator.swift */; };
 		8A0BB8942BC18F8900AF7326 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB8932BC18F8900AF7326 /* AppCoordinator.swift */; };
+		8A54E02C2BC6EC7900D307EB /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E02B2BC6EC7900D307EB /* OnboardingCoordinator.swift */; };
+		8A54E02E2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E02D2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift */; };
+		8A54E0312BC6ECC200D307EB /* OnboardingModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0302BC6ECC200D307EB /* OnboardingModuleFactory.swift */; };
+		8A54E0332BC6ECD000D307EB /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0322BC6ECD000D307EB /* OnboardingPresenter.swift */; };
+		8A54E0352BC6ECDF00D307EB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0342BC6ECDF00D307EB /* OnboardingViewController.swift */; };
+		8A54E0532BC8362600D307EB /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0522BC8362600D307EB /* LoginCoordinator.swift */; };
+		8A54E0562BC836D600D307EB /* LoginModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0552BC836D600D307EB /* LoginModuleFactory.swift */; };
+		8A54E0582BC8370A00D307EB /* EnterUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0572BC8370A00D307EB /* EnterUsernamePresenter.swift */; };
+		8A54E05A2BC8371400D307EB /* EnterUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0592BC8371400D307EB /* EnterUsernameViewController.swift */; };
+		8A54E05D2BC8376B00D307EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E05C2BC8376B00D307EB /* User.swift */; };
+		8A54E05F2BC846A200D307EB /* EnterPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E05E2BC846A200D307EB /* EnterPasswordPresenter.swift */; };
+		8A54E0612BC846B500D307EB /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0602BC846B500D307EB /* EnterPasswordViewController.swift */; };
+		8A54E0632BC863F700D307EB /* LoginSuccessPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0622BC863F700D307EB /* LoginSuccessPresenter.swift */; };
+		8A54E0652BC8640A00D307EB /* LoginSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0642BC8640A00D307EB /* LoginSuccessViewController.swift */; };
 		8AF23EE92BC1B189008A3944 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EE82BC1B189008A3944 /* Module.swift */; };
 		8AF23EEC2BC1B1D3008A3944 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EEB2BC1B1D3008A3944 /* Routable.swift */; };
 		8AF23EEE2BC1B782008A3944 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EED2BC1B782008A3944 /* Router.swift */; };
-		8AF23F032BC2A1AC008A3944 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F022BC2A1AC008A3944 /* View.swift */; };
+		8AF23F032BC2A1AC008A3944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F022BC2A1AC008A3944 /* ViewController.swift */; };
 		8AF23F052BC2A2EB008A3944 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F042BC2A2EB008A3944 /* Presenter.swift */; };
 		8AF23F112BC409D6008A3944 /* WelcomeScreenCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F102BC409D6008A3944 /* WelcomeScreenCoordinatorOutput.swift */; };
 		8AF23F132BC40A0C008A3944 /* WelcomeScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F122BC40A0C008A3944 /* WelcomeScreenCoordinator.swift */; };
@@ -40,10 +54,24 @@
 		8A0BB8882BC17F3300AF7326 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8A0BB8912BC18F1A00AF7326 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8A0BB8932BC18F8900AF7326 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8A54E02B2BC6EC7900D307EB /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		8A54E02D2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8A54E0302BC6ECC200D307EB /* OnboardingModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModuleFactory.swift; sourceTree = "<group>"; };
+		8A54E0322BC6ECD000D307EB /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		8A54E0342BC6ECDF00D307EB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8A54E0522BC8362600D307EB /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		8A54E0552BC836D600D307EB /* LoginModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleFactory.swift; sourceTree = "<group>"; };
+		8A54E0572BC8370A00D307EB /* EnterUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUsernamePresenter.swift; sourceTree = "<group>"; };
+		8A54E0592BC8371400D307EB /* EnterUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUsernameViewController.swift; sourceTree = "<group>"; };
+		8A54E05C2BC8376B00D307EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8A54E05E2BC846A200D307EB /* EnterPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordPresenter.swift; sourceTree = "<group>"; };
+		8A54E0602BC846B500D307EB /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
+		8A54E0622BC863F700D307EB /* LoginSuccessPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessPresenter.swift; sourceTree = "<group>"; };
+		8A54E0642BC8640A00D307EB /* LoginSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessViewController.swift; sourceTree = "<group>"; };
 		8AF23EE82BC1B189008A3944 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		8AF23EEB2BC1B1D3008A3944 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		8AF23EED2BC1B782008A3944 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		8AF23F022BC2A1AC008A3944 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		8AF23F022BC2A1AC008A3944 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8AF23F042BC2A2EB008A3944 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		8AF23F102BC409D6008A3944 /* WelcomeScreenCoordinatorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenCoordinatorOutput.swift; sourceTree = "<group>"; };
 		8AF23F122BC40A0C008A3944 /* WelcomeScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenCoordinator.swift; sourceTree = "<group>"; };
@@ -88,8 +116,8 @@
 		8A0BB8712BC17C5400AF7326 /* Warehouse */ = {
 			isa = PBXGroup;
 			children = (
+				8A54E05B2BC8375500D307EB /* Models */,
 				8A0BB8872BC17CCE00AF7326 /* Application */,
-				8AF23EF62BC1EE8C008A3944 /* Extensions */,
 				8AF23EEA2BC1B190008A3944 /* Protocols */,
 				8A0BB88E2BC1828300AF7326 /* Parents */,
 				8A0BB88A2BC180BF00AF7326 /* Flows */,
@@ -121,10 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				8AF23EFF2BC1FCF1008A3944 /* Application */,
-				8AF23F242BC46721008A3944 /* Overview */,
-				8AF23F252BC467A6008A3944 /* Sessions */,
-				8AF23F262BC467BD008A3944 /* Progress */,
-				8AF23F272BC467C6008A3944 /* Settings */,
+				8A54E0512BC8361100D307EB /* LoginFlow */,
+				8A54E02A2BC6EC2800D307EB /* OnboardingFlow */,
 				8AF23F232BC4670D008A3944 /* MainTabBar */,
 				8AF23F0F2BC40960008A3944 /* WelcomeScreen */,
 			);
@@ -134,12 +160,63 @@
 		8A0BB88E2BC1828300AF7326 /* Parents */ = {
 			isa = PBXGroup;
 			children = (
-				8AF23F022BC2A1AC008A3944 /* View.swift */,
+				8AF23F022BC2A1AC008A3944 /* ViewController.swift */,
 				8AF23F042BC2A2EB008A3944 /* Presenter.swift */,
 				8A0BB8912BC18F1A00AF7326 /* Coordinator.swift */,
 				8AF23EED2BC1B782008A3944 /* Router.swift */,
 			);
 			path = Parents;
+			sourceTree = "<group>";
+		};
+		8A54E02A2BC6EC2800D307EB /* OnboardingFlow */ = {
+			isa = PBXGroup;
+			children = (
+				8A54E02B2BC6EC7900D307EB /* OnboardingCoordinator.swift */,
+				8A54E02D2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift */,
+				8A54E0302BC6ECC200D307EB /* OnboardingModuleFactory.swift */,
+				8A54E02F2BC6EC8900D307EB /* Modules */,
+			);
+			path = OnboardingFlow;
+			sourceTree = "<group>";
+		};
+		8A54E02F2BC6EC8900D307EB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8A54E0322BC6ECD000D307EB /* OnboardingPresenter.swift */,
+				8A54E0342BC6ECDF00D307EB /* OnboardingViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8A54E0512BC8361100D307EB /* LoginFlow */ = {
+			isa = PBXGroup;
+			children = (
+				8A54E0522BC8362600D307EB /* LoginCoordinator.swift */,
+				8A54E0552BC836D600D307EB /* LoginModuleFactory.swift */,
+				8A54E0542BC8363300D307EB /* Modules */,
+			);
+			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		8A54E0542BC8363300D307EB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8A54E0572BC8370A00D307EB /* EnterUsernamePresenter.swift */,
+				8A54E0592BC8371400D307EB /* EnterUsernameViewController.swift */,
+				8A54E05E2BC846A200D307EB /* EnterPasswordPresenter.swift */,
+				8A54E0602BC846B500D307EB /* EnterPasswordViewController.swift */,
+				8A54E0622BC863F700D307EB /* LoginSuccessPresenter.swift */,
+				8A54E0642BC8640A00D307EB /* LoginSuccessViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8A54E05B2BC8375500D307EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A54E05C2BC8376B00D307EB /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8AF23EEA2BC1B190008A3944 /* Protocols */ = {
@@ -151,18 +228,11 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		8AF23EF62BC1EE8C008A3944 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		8AF23EFF2BC1FCF1008A3944 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				8AF23F212BC4575F008A3944 /* AppCoordinatorFactory.swift */,
 				8A0BB8932BC18F8900AF7326 /* AppCoordinator.swift */,
+				8AF23F212BC4575F008A3944 /* AppCoordinatorFactory.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -197,34 +267,6 @@
 				8AF23F282BC4688C008A3944 /* MainTabBarCoordinator.swift */,
 			);
 			path = MainTabBar;
-			sourceTree = "<group>";
-		};
-		8AF23F242BC46721008A3944 /* Overview */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Overview;
-			sourceTree = "<group>";
-		};
-		8AF23F252BC467A6008A3944 /* Sessions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sessions;
-			sourceTree = "<group>";
-		};
-		8AF23F262BC467BD008A3944 /* Progress */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Progress;
-			sourceTree = "<group>";
-		};
-		8AF23F272BC467C6008A3944 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,24 +340,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AF23F292BC4688C008A3944 /* MainTabBarCoordinator.swift in Sources */,
+				8A54E05F2BC846A200D307EB /* EnterPasswordPresenter.swift in Sources */,
 				8AF23F182BC40BCC008A3944 /* WelcomeScreenView.swift in Sources */,
 				8AF23F2D2BC46F97008A3944 /* MainTabBarController.swift in Sources */,
+				8A54E0612BC846B500D307EB /* EnterPasswordViewController.swift in Sources */,
 				8AF23F112BC409D6008A3944 /* WelcomeScreenCoordinatorOutput.swift in Sources */,
+				8A54E0532BC8362600D307EB /* LoginCoordinator.swift in Sources */,
+				8A54E05A2BC8371400D307EB /* EnterUsernameViewController.swift in Sources */,
 				8AF23EEC2BC1B1D3008A3944 /* Routable.swift in Sources */,
 				8AF23F222BC4575F008A3944 /* AppCoordinatorFactory.swift in Sources */,
+				8A54E05D2BC8376B00D307EB /* User.swift in Sources */,
 				8A0BB8942BC18F8900AF7326 /* AppCoordinator.swift in Sources */,
 				8AF23F162BC40BBE008A3944 /* WelcomeScreenPresenter.swift in Sources */,
-				8AF23F032BC2A1AC008A3944 /* View.swift in Sources */,
+				8A54E0632BC863F700D307EB /* LoginSuccessPresenter.swift in Sources */,
+				8AF23F032BC2A1AC008A3944 /* ViewController.swift in Sources */,
 				8AF23EE92BC1B189008A3944 /* Module.swift in Sources */,
+				8A54E0652BC8640A00D307EB /* LoginSuccessViewController.swift in Sources */,
+				8A54E02C2BC6EC7900D307EB /* OnboardingCoordinator.swift in Sources */,
 				8AF23EEE2BC1B782008A3944 /* Router.swift in Sources */,
+				8A54E0352BC6ECDF00D307EB /* OnboardingViewController.swift in Sources */,
 				8AF23F202BC44F42008A3944 /* WelcomeScreenModuleOutput.swift in Sources */,
 				8AF23F1E2BC44B39008A3944 /* WelcomeScreenModuleFactory.swift in Sources */,
+				8A54E0582BC8370A00D307EB /* EnterUsernamePresenter.swift in Sources */,
 				8AF23F052BC2A2EB008A3944 /* Presenter.swift in Sources */,
+				8A54E0332BC6ECD000D307EB /* OnboardingPresenter.swift in Sources */,
 				8AF23F132BC40A0C008A3944 /* WelcomeScreenCoordinator.swift in Sources */,
 				8AF23F2B2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift in Sources */,
 				8A0BB8922BC18F1A00AF7326 /* Coordinator.swift in Sources */,
+				8A54E02E2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift in Sources */,
 				8A0BB8732BC17C5400AF7326 /* AppDelegate.swift in Sources */,
+				8A54E0562BC836D600D307EB /* LoginModuleFactory.swift in Sources */,
 				8A0BB8892BC17F3300AF7326 /* SceneDelegate.swift in Sources */,
+				8A54E0312BC6ECC200D307EB /* OnboardingModuleFactory.swift in Sources */,
 				8AF23F1C2BC4447E008A3944 /* WelcomeScreenCoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

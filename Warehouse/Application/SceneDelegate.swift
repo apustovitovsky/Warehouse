@@ -23,14 +23,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let rootController = UINavigationController()
             coordinator = AppCoordinator(
                 router: Router(rootController: rootController),
-                coordinatorFactory: WelcomeScreenCoordinatorFactory(),
-                moduleFactory: WelcomeScreenModuleFactory()
+                coordinatorFactory: AppCoordinatorFactory()
             )
             coordinator?.start()
             window.rootViewController = rootController
             window.makeKeyAndVisible()
         }
     }
-    
 }
 

@@ -20,7 +20,7 @@ final class WelcomeScreenCoordinatorFactory: WelcomeScreenCoordinatorFactoryProt
         let controller = UINavigationController()
         let router = Router(rootController: controller)
         let coordinator = WelcomeScreenCoordinator(
-            router: router, 
+            router: router,
             moduleFactory: WelcomeScreenModuleFactory()
         )
         return (router, coordinator)

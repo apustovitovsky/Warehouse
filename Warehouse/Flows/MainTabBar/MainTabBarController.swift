@@ -26,7 +26,6 @@ final class MainTabBarController: UITabBarController, MainTabBarControllerProtoc
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         delegate = self
         if let controller = customizableViewControllers?.first as? UINavigationController {
             onOverviewFlowSelect?(controller)
