@@ -1,17 +1,12 @@
-//
-//  OnboardingViewController.swift
-//  Warehouse
-//
-//  Created by Алексей on 10.04.2024.
-//
-
 import UIKit
 
 
-protocol OnboardingViewControllerInput: AnyObject { }
+protocol OnboardingViewControllerInput: AnyObject {}
 
 
-final class OnboardingViewController: ViewController<OnboardingPresenterInput> {
+final class OnboardingViewController: UIViewController, ViewController, Presentable {
+    
+    var presenter: OnboardingPresenterInput?
     
     private let loginButton: UIButton = {
         let button = UIButton()
@@ -63,5 +58,5 @@ final class OnboardingViewController: ViewController<OnboardingPresenterInput> {
 }
 
 
-extension OnboardingViewController: OnboardingViewControllerInput { }
+extension OnboardingViewController: OnboardingViewControllerInput {}
 

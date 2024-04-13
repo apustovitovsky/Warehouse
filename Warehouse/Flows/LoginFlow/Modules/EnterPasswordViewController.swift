@@ -2,12 +2,13 @@ import UIKit
 
 
 protocol EnterPasswordViewControllerInput: AnyObject {
-    
     func updateTitle(with username: String)
 }
 
 
-final class EnterPasswordViewController: ViewController<EnterPasswordPresenterInput> {
+final class EnterPasswordViewController: UIViewController, ViewController, Presentable {
+    
+    var presenter: EnterPasswordPresenterInput?
     
     private let passwordTextField: UITextField = {
         let textField = UITextField()
@@ -55,7 +56,6 @@ final class EnterPasswordViewController: ViewController<EnterPasswordPresenterIn
 
 
 extension EnterPasswordViewController: EnterPasswordViewControllerInput {
-    
     func updateTitle(with username: String) {
         title = "Enter Password for \(username)"
     }

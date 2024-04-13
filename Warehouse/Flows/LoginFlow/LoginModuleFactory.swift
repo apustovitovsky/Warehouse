@@ -9,13 +9,13 @@ import Foundation
 
 protocol LoginModuleFactoryProtocol {
     
-    func makeEnterUsernameModule(completion: ((EnterUsernameModuleOutput) -> Void)?) -> Module
-    func makeEnterPasswordModule(user: User, completion: ((EnterPasswordModuleOutput) -> Void)?) -> Module
+    func makeEnterUsernameModule(completion: ((EnterUsernameModuleOutput) -> Void)?) -> Presentable
+    func makeEnterPasswordModule(user: User, completion: ((EnterPasswordModuleOutput) -> Void)?) -> Presentable
 }
 
 final class LoginModuleFactory: LoginModuleFactoryProtocol {
 
-    func makeEnterUsernameModule(completion: ((EnterUsernameModuleOutput) -> Void)?) -> Module {
+    func makeEnterUsernameModule(completion: ((EnterUsernameModuleOutput) -> Void)?) -> Presentable {
         let viewController = EnterUsernameViewController()
         let presenter = EnterUsernamePresenter(viewController: viewController)
         viewController.presenter = presenter
@@ -23,15 +23,15 @@ final class LoginModuleFactory: LoginModuleFactoryProtocol {
         return viewController
     }
     
-    func makeEnterPasswordModule(user: User, completion: ((EnterPasswordModuleOutput) -> Void)?) -> Module {
+    func makeEnterPasswordModule(user: User, completion: ((EnterPasswordModuleOutput) -> Void)?) -> Presentable {
         let viewController = EnterPasswordViewController()
-        let presenter = EnterPasswordPresenter(user: user, view: viewController)
+        let presenter = EnterPasswordPresenter(user: user, viewController: viewController)
         viewController.presenter = presenter
         completion?(presenter)
         return viewController
     }
     
-    func makeLoginSuccessModule(user: User, completion: ((LoginSuccessModuleOutput) -> Void)?) -> Module {
+    func makeLoginSuccessModule(user: User, completion: ((LoginSuccessModuleOutput) -> Void)?) -> Presentable {
         let viewController = LoginSuccessViewController(user: user)
         let presenter = LoginSuccessPresenter(viewController: viewController)
         viewController.presenter = presenter

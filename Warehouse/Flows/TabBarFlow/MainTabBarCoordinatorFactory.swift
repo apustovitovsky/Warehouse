@@ -20,34 +20,34 @@ protocol MainTabBarCoordinatorFactoryProtocol {
 final class MainTabBarCoordinatorFactory: MainTabBarCoordinatorFactoryProtocol {
     
     func makeOverviewFlow(navController: UINavigationController) -> Coordinator {
-        let coordinator = WelcomeScreenCoordinator(
+        return OnboardingCoordinator(
             router: Router(rootController: navController),
-            moduleFactory: WelcomeScreenModuleFactory()
+            moduleFactory: OnboardingModuleFactory(),
+            coordinatorFactory: OnboardingCoordinatorFactory()
         )
-        return coordinator
     }
     
     func makeSessionsFlow(navController: UINavigationController) -> Coordinator {
-        let coordinator = WelcomeScreenCoordinator(
+        return OnboardingCoordinator(
             router: Router(rootController: navController),
-            moduleFactory: WelcomeScreenModuleFactory()
+            moduleFactory: OnboardingModuleFactory(),
+            coordinatorFactory: OnboardingCoordinatorFactory()
         )
-        return coordinator
     }
     
     func makeProgressFlow(navController: UINavigationController) -> Coordinator {
-        let coordinator = WelcomeScreenCoordinator(
+        return OnboardingCoordinator(
             router: Router(rootController: navController),
-            moduleFactory: WelcomeScreenModuleFactory()
+            moduleFactory: OnboardingModuleFactory(),
+            coordinatorFactory: OnboardingCoordinatorFactory()
         )
-        return coordinator
     }
     
     func makeSettingsFlow(navController: UINavigationController) -> Coordinator {
-        let coordinator = WelcomeScreenCoordinator(
+        return OnboardingCoordinator(
             router: Router(rootController: navController),
-            moduleFactory: WelcomeScreenModuleFactory()
+            moduleFactory: OnboardingModuleFactory(),
+            coordinatorFactory: OnboardingCoordinatorFactory()
         )
-        return coordinator
     }
 }

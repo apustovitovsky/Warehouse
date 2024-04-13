@@ -10,23 +10,27 @@ import UIKit
 
 final class MainTabBarCoordinator: Coordinator {
     
-    private let controller: MainTabBarControllerProtocol
+    var coordinators: [Coordinator] = []
+    private let controller: MainTabBarControllerOutput
     private let coordinatorFactory: MainTabBarCoordinatorFactoryProtocol
     
-    init(controller: MainTabBarControllerProtocol,
+    init(controller: MainTabBarControllerOutput,
          coordinatorFactory: MainTabBarCoordinatorFactoryProtocol) {
         self.controller = controller
         self.coordinatorFactory = coordinatorFactory
     }
     
-    override func start() {
+    func start() {
         controller.onOverviewFlowSelect = runOverviewFlow()
         controller.onProgressFlowSelect = runProgressFlow()
         controller.onSessionsFlowSelect = runSessionsFlow()
         controller.onSettingsFlowSelect = runSettingsFlow()
     }
     
-    private func runOverviewFlow() -> ((UINavigationController) -> ()) {
+}
+private extension MainTabBarCoordinator {
+    
+    func runOverviewFlow() -> ((UINavigationController) -> ()) {
         return { [weak self] navController in
             if navController.viewControllers.isEmpty {
                 let coordinator = self?.coordinatorFactory.makeOverviewFlow(navController: navController)
@@ -36,7 +40,7 @@ final class MainTabBarCoordinator: Coordinator {
         }
     }
     
-    private func runSessionsFlow() -> ((UINavigationController) -> ()) {
+    func runSessionsFlow() -> ((UINavigationController) -> ()) {
         return { [weak self] navController in
             if navController.viewControllers.isEmpty {
                 let coordinator = self?.coordinatorFactory.makeSessionsFlow(navController: navController)
@@ -46,7 +50,7 @@ final class MainTabBarCoordinator: Coordinator {
         }
     }
     
-    private func runProgressFlow() -> ((UINavigationController) -> ()) {
+    func runProgressFlow() -> ((UINavigationController) -> ()) {
         return { [weak self] navController in
             if navController.viewControllers.isEmpty {
                 let coordinator = self?.coordinatorFactory.makeProgressFlow(navController: navController)
@@ -56,7 +60,7 @@ final class MainTabBarCoordinator: Coordinator {
         }
     }
     
-    private func runSettingsFlow() -> ((UINavigationController) -> ()) {
+    func runSettingsFlow() -> ((UINavigationController) -> ()) {
         return { [weak self] navController in
             if navController.viewControllers.isEmpty {
                 let coordinator = self?.coordinatorFactory.makeSettingsFlow(navController: navController)

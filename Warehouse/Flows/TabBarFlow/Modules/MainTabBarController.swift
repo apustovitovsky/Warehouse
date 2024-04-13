@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol MainTabBarControllerProtocol: AnyObject {
+protocol MainTabBarControllerOutput: AnyObject {
     
     var onOverviewFlowSelect: ((UINavigationController) -> Void)? { get set }
     var onSessionsFlowSelect: ((UINavigationController) -> Void)? { get set }
@@ -16,7 +16,11 @@ protocol MainTabBarControllerProtocol: AnyObject {
     var onSettingsFlowSelect: ((UINavigationController) -> Void)? { get set }
 }
 
-final class MainTabBarController: UITabBarController, MainTabBarControllerProtocol {
+final class MainTabBarController: UITabBarController, Presentable, MainTabBarControllerOutput {
+    func toPresent() -> UIViewController? {
+        return self
+    }
+    
     
     var onOverviewFlowSelect: ((UINavigationController) -> ())?
     var onSessionsFlowSelect: ((UINavigationController) -> ())?
@@ -26,11 +30,16 @@ final class MainTabBarController: UITabBarController, MainTabBarControllerProtoc
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTabs()
         delegate = self
-        if let controller = customizableViewControllers?.first as? UINavigationController {
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let controller = customizableViewControllers?[selectedIndex] as? UINavigationController {
             onOverviewFlowSelect?(controller)
         }
-        setupTabs()
     }
     
     private func setupTabs() {

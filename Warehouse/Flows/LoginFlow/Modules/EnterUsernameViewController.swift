@@ -1,10 +1,12 @@
 import UIKit
 
 
-protocol EnterUsernameViewControllerInput: AnyObject { }
+protocol EnterUsernameViewControllerInput: AnyObject {}
 
 
-final class EnterUsernameViewController: ViewController<EnterUsernamePresenterInput> {
+final class EnterUsernameViewController: UIViewController, ViewController, Presentable {
+
+    var presenter: EnterUsernamePresenterInput?
     
     private let usernameTextField: UITextField = {
         let textField = UITextField()
@@ -53,4 +55,4 @@ final class EnterUsernameViewController: ViewController<EnterUsernamePresenterIn
 }
 
 
-extension EnterUsernameViewController: EnterUsernameViewControllerInput { }
+extension EnterUsernameViewController: EnterUsernameViewControllerInput {}

@@ -10,6 +10,7 @@ import UIKit
 
 final class AppCoordinator: Coordinator {
     
+    var coordinators: [Coordinator] = []
     private let router: Router
     private let coordinatorFactory: AppCoordinatorFactoryProtocol
     
@@ -19,7 +20,7 @@ final class AppCoordinator: Coordinator {
         self.coordinatorFactory = coordinatorFactory
     }
     
-    override func start() {
+    func start() {
         showOnboarding()
     }
 }
@@ -28,7 +29,7 @@ final class AppCoordinator: Coordinator {
 private extension AppCoordinator {
     
     func showOnboarding() {
-        let coordinator = coordinatorFactory.makeOnboardingCoordinator(router: router)
+        let coordinator = coordinatorFactory.makeOnboardingCoordinator(with: router)
         
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.showMainTabBarFlow()
@@ -46,24 +47,4 @@ private extension AppCoordinator {
         coordinator.start()
     }
     
-    func showWelcomeScreen() {
-        let (module, coordinator) = WelcomeScreenCoordinatorFactory().makeWelcomeScreenCoordinator()
-        coordinator.finishFlow = { [weak self, weak coordinator] in
-            
-            self?.router.dismiss(animated: true)
-            self?.remove(coordinator)
-            print("completed")
-        }
-        router.present(module)
-        add(coordinator)
-        coordinator.start()
-    }
-    
-    func showHomeScreen() {
-        let module = WelcomeScreenModuleFactory().makeWelcomeScreenModule(backgroundColor: .lightGray)
-        module.finishModule = { [weak self] in
-            self?.showWelcomeScreen()
-        }
-        router.setRoot(module, hideBar: false)
-    }
 }

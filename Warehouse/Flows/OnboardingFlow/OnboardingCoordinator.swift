@@ -8,7 +8,8 @@ protocol OnboardingCoordinatorOutput: AnyObject {
 
 
 final class OnboardingCoordinator: Coordinator, OnboardingCoordinatorOutput {
-
+    
+    var coordinators: [Coordinator] = []
     var finishFlow: (() -> Void)?
 
     private let router: Router
@@ -24,7 +25,7 @@ final class OnboardingCoordinator: Coordinator, OnboardingCoordinatorOutput {
         self.coordinatorFactory = coordinatorFactory
     }
     
-    override func start() {
+    func start() {
         showOnboarding()
     }
 }
@@ -47,7 +48,7 @@ private extension OnboardingCoordinator {
     }
     
     func runLogin() {
-        let coordinator = coordinatorFactory.makeLoginCoordinator(router: router)
+        let coordinator = coordinatorFactory.makeLoginCoordinator(with: router)
         
         coordinator.finishFlow = { [weak self, weak coordinator] user in
             self?.finishFlow?()

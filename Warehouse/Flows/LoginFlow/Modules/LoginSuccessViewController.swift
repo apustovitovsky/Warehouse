@@ -1,10 +1,12 @@
 import UIKit
 
 
-protocol LoginSuccessViewControllerInput: AnyObject { }
+protocol LoginSuccessViewControllerInput: AnyObject {}
 
 
-final class LoginSuccessViewController: ViewController<LoginSuccessPresenterInput> {
+final class LoginSuccessViewController: UIViewController, ViewController, Presentable {
+    
+    var presenter: LoginSuccessPresenterInput?
     
     private let welcomeLabel: UILabel = {
         let label = UILabel()
@@ -51,5 +53,4 @@ final class LoginSuccessViewController: ViewController<LoginSuccessPresenterInpu
     }
 }
 
-
-extension LoginSuccessViewController: LoginSuccessViewControllerInput { }
+extension LoginSuccessViewController: LoginSuccessViewControllerInput {}

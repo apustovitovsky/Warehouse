@@ -10,14 +10,14 @@ import UIKit
 
 protocol AppCoordinatorFactoryProtocol {
     
-    func makeMainTabBarCoordinator() -> (Module, Coordinator)
-    func makeOnboardingCoordinator(router: Router) -> Coordinator & OnboardingCoordinatorOutput
+    func makeMainTabBarCoordinator() -> (Presentable, Coordinator)
+    func makeOnboardingCoordinator(with router: Router) -> Coordinator & OnboardingCoordinatorOutput
 }
 
 
 final class AppCoordinatorFactory: AppCoordinatorFactoryProtocol {
     
-    func makeMainTabBarCoordinator() -> (Module, Coordinator) {
+    func makeMainTabBarCoordinator() -> (Presentable, Coordinator) {
         let controller = MainTabBarController()
         let coordinator = MainTabBarCoordinator(
             controller: controller,
@@ -26,7 +26,7 @@ final class AppCoordinatorFactory: AppCoordinatorFactoryProtocol {
         return (controller, coordinator)
     }
     
-    func makeOnboardingCoordinator(router: Router) -> Coordinator & OnboardingCoordinatorOutput {
+    func makeOnboardingCoordinator(with router: Router) -> Coordinator & OnboardingCoordinatorOutput {
         return OnboardingCoordinator(
             router: router,
             moduleFactory: OnboardingModuleFactory(),

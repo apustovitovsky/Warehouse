@@ -10,11 +10,11 @@ import Foundation
 
 protocol Routable: AnyObject {
 
-    func push(_ module: Module?)
-    func present(_ module: Module?)
+    func push(_ module: Presentable?)
+    func present(_ module: Presentable?)
     func dismiss(animated: Bool)
     func pop(animated: Bool)
-    func setRoot(_ module: Module?, hideBar: Bool)
+    func setRoot(_ module: Presentable?, hideBar: Bool)
     func popToRoot(animated: Bool)
 }
 

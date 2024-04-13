@@ -8,6 +8,7 @@ protocol LoginCoordinatorOutput: AnyObject {
 
 final class LoginCoordinator: Coordinator, LoginCoordinatorOutput {
     
+    var coordinators: [Coordinator] = []
     var finishFlow: ((User) -> Void)?
     
     private let router: Router
@@ -20,7 +21,7 @@ final class LoginCoordinator: Coordinator, LoginCoordinatorOutput {
         self.moduleFactory = moduleFactory
     }
     
-    override func start() {
+    func start() {
         showEnterUsername()
     }
 }

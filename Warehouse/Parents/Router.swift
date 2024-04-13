@@ -16,7 +16,7 @@ final class Router: Routable {
         self.rootController = rootController
     }
     
-    func push(_ module: Module?) {
+    func push(_ module: Presentable?) {
         guard 
             let controller = module?.toPresent(),
             !(controller is UINavigationController) else { return }
@@ -24,7 +24,7 @@ final class Router: Routable {
         rootController?.pushViewController(controller, animated: true)
     }
     
-    func push(_ module: Module?, animated: Bool, hideBottomBar: Bool) {
+    func push(_ module: Presentable?, animated: Bool, hideBottomBar: Bool) {
         guard
             let controller = module?.toPresent(),
             !(controller is UINavigationController) else { return }
@@ -33,7 +33,7 @@ final class Router: Routable {
         rootController?.pushViewController(controller, animated: animated)
     }
     
-    func present(_ module: Module?) {
+    func present(_ module: Presentable?) {
         guard let controller = module?.toPresent() else { return }
         rootController?.present(controller, animated: true)
     }
@@ -46,7 +46,7 @@ final class Router: Routable {
         rootController?.popViewController(animated: animated)
     }
     
-    func setRoot(_ module: Module?, hideBar: Bool) {
+    func setRoot(_ module: Presentable?, hideBar: Bool) {
         guard let controller = module?.toPresent() else { return }
         rootController?.setViewControllers([controller], animated: false)
         rootController?.isNavigationBarHidden = hideBar
@@ -58,7 +58,7 @@ final class Router: Routable {
 }
 
 
-extension Router: Module {
+extension Router: Presentable {
     
     func toPresent() -> UIViewController? {
         return rootController

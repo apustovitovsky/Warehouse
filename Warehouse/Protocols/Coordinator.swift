@@ -1,11 +1,15 @@
 import Foundation
 
 
-class Coordinator {
-    
-    private var coordinators: [Coordinator] = []
+protocol Coordinator: AnyObject {
+    var coordinators: [Coordinator] { get set }
+    func start()
+    func add(_ coordinator: Coordinator?)
+    func remove(_ coordinator: Coordinator?)
+}
 
-    func start() {}
+
+extension Coordinator {
     
     func add(_ coordinator: Coordinator?) {
         guard !coordinators.contains(where: { $0 === coordinator }) else { return }
