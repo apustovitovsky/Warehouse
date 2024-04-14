@@ -9,7 +9,6 @@ import UIKit
 
 
 final class AppCoordinator: Coordinator {
-    
     var coordinators: [Coordinator] = []
     private let router: Router
     private let coordinatorFactory: AppCoordinatorFactoryProtocol
@@ -27,15 +26,12 @@ final class AppCoordinator: Coordinator {
 
 
 private extension AppCoordinator {
-    
     func showOnboarding() {
         let coordinator = coordinatorFactory.makeOnboardingCoordinator(with: router)
-        
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.showMainTabBarFlow()
             self?.remove(coordinator)
         }
-        
         add(coordinator)
         coordinator.start()
     }
@@ -46,5 +42,4 @@ private extension AppCoordinator {
         router.setRoot(module, hideBar: true)
         coordinator.start()
     }
-    
 }

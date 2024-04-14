@@ -4,7 +4,7 @@ import UIKit
 protocol OnboardingViewControllerInput: AnyObject {}
 
 
-final class OnboardingViewController: UIViewController, ViewController, Presentable {
+final class OnboardingViewController: UIViewController, ViewController {
     
     var presenter: OnboardingPresenterInput?
     

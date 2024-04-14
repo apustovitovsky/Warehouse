@@ -1,7 +1,7 @@
 import UIKit
 
 
-protocol ViewController: UIViewController {
+protocol ViewController: Presentable {
     associatedtype T
     var presenter: T? { get set }
 }

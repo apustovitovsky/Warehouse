@@ -4,7 +4,7 @@ import UIKit
 protocol LoginSuccessViewControllerInput: AnyObject {}
 
 
-final class LoginSuccessViewController: UIViewController, ViewController, Presentable {
+final class LoginSuccessViewController: UIViewController, ViewController {
     
     var presenter: LoginSuccessPresenterInput?
     

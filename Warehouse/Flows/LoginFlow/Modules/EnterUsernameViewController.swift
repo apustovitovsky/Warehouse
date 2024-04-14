@@ -4,7 +4,7 @@ import UIKit
 protocol EnterUsernameViewControllerInput: AnyObject {}
 
 
-final class EnterUsernameViewController: UIViewController, ViewController, Presentable {
+final class EnterUsernameViewController: UIViewController, ViewController {
 
     var presenter: EnterUsernamePresenterInput?
     

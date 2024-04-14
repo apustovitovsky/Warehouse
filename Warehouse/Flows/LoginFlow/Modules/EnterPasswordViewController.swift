@@ -6,7 +6,7 @@ protocol EnterPasswordViewControllerInput: AnyObject {
 }
 
 
-final class EnterPasswordViewController: UIViewController, ViewController, Presentable {
+final class EnterPasswordViewController: UIViewController, ViewController {
     
     var presenter: EnterPasswordPresenterInput?
     

@@ -37,17 +37,17 @@ private extension OnboardingCoordinator {
         let module = moduleFactory.makeOnboardingModule { [weak self] output in
             
             output.toLogin = {
-             self?.runLogin()
+             self?.showSignIn()
             }
 
             output.toSignUp = {
-             self?.runSignUp()
+             self?.showSignUp()
             }
         }
         router.setRoot(module, hideBar: false)
     }
     
-    func runLogin() {
+    func showSignIn() {
         let coordinator = coordinatorFactory.makeLoginCoordinator(with: router)
         
         coordinator.finishFlow = { [weak self, weak coordinator] user in
@@ -60,7 +60,7 @@ private extension OnboardingCoordinator {
         coordinator.start()
     }
 
-    func runSignUp() {
-        print("To Sign Up FLow...")
+    func showSignUp() {
+        print("To Sign Up Flow...")
     }
 }
