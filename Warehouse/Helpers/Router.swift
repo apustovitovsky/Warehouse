@@ -21,8 +21,9 @@ struct Router {
             let controller = controller?.toPresent(),
             !(controller is UINavigationController) else { return }
         
-        controller.hidesBottomBarWhenPushed = hideBottomBar
+        //controller.hidesBottomBarWhenPushed = hideBottomBar
         rootController?.pushViewController(controller, animated: animated)
+        rootController?.isNavigationBarHidden = hideBottomBar
     }
     
     func present(_ controller: Presentable?) {
@@ -36,6 +37,11 @@ struct Router {
     
     func pop(animated: Bool) {
         rootController?.popViewController(animated: animated)
+    }    
+    
+    func popTo(_ controller: Presentable?, animated: Bool) {
+        guard let controller = controller?.toPresent() else { return }
+        rootController?.popToViewController(controller, animated: animated)
     }
     
     func setRoot(_ controller: Presentable?, hideBar: Bool) {

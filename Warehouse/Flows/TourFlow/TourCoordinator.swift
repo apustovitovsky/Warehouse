@@ -40,7 +40,7 @@ private extension TourCoordinator {
                 self?.finishFlow?()
             }
         }
-        router.push(module)
+        router.setRoot(module, hideBar: false)
     }
     
     func showTourStepTwoModule() {

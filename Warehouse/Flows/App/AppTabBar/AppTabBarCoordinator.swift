@@ -33,7 +33,7 @@ private extension AppTabBarCoordinator {
         controller.makeOverviewFlow = { [weak self] navigation in
             let coordinator = self?.coordinatorFactory.makeOverviewFlow(navController: navigation)
             
-            coordinator?.finishFlow = { [weak self] in
+            coordinator?.finishFlow = {
                 self?.finishFlow?()
             }
             
@@ -46,7 +46,7 @@ private extension AppTabBarCoordinator {
         controller.makeSessionsFlow = { [weak self] navigation in
             let coordinator = self?.coordinatorFactory.makeSessionsFlow(navController: navigation)
             
-            coordinator?.finishFlow = { [weak self] in
+            coordinator?.finishFlow = {
                 self?.finishFlow?()
             }
             
@@ -59,7 +59,7 @@ private extension AppTabBarCoordinator {
         controller.makeProgressFlow = { [weak self] navigation in
             let coordinator = self?.coordinatorFactory.makeProgressFlow(navController: navigation)
             
-            coordinator?.finishFlow = { [weak self] in
+            coordinator?.finishFlow = {
                 self?.finishFlow?()
             }
             
@@ -72,7 +72,7 @@ private extension AppTabBarCoordinator {
         controller.makeSettingsFlow = { [weak self] navigation in
             let coordinator = self?.coordinatorFactory.makeSettingsFlow(navController: navigation)
             
-            coordinator?.finishFlow = { [weak self] in
+            coordinator?.finishFlow = {
                 self?.finishFlow?()
             }
             

@@ -14,6 +14,8 @@ final class SignInCoordinator: Coordinator, SignInCoordinatorOutput {
     private let moduleFactory: SignInModuleFactoryProtocol
     private let coordinatorFactory: SignInCoordinatorFactoryProtocol
     
+    private weak var enterUsernameModule: EnterUsernameViewController?
+    
     init(router: Router,
          moduleFactory: SignInModuleFactoryProtocol,
          coordinatorFactory: SignInCoordinatorFactoryProtocol) {
@@ -42,13 +44,14 @@ private extension SignInCoordinator {
                 self?.showSignUp()
             }
         }
-        router.setRoot(module, hideBar: true)
+        enterUsernameModule = module as? EnterUsernameViewController
+        router.setRoot(module, hideBar: false)
     }
     
     func showSignUp() {
         let coordinator = coordinatorFactory.makeSignUpCoordinator(with: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
-            self?.showEnterUsername()
+            self?.router.popTo(self?.enterUsernameModule, animated: true)
             self?.remove(coordinator)
         }
         add(coordinator)
@@ -70,9 +73,8 @@ private extension SignInCoordinator {
             
             output.finishModule = {
                 self?.finishFlow?()
-                self?.router.popToRoot(animated: true)
             }
         }
-        router.setRoot(module, hideBar: true)
+        router.push(module, animated: true, hideBottomBar: true)
     }
 }

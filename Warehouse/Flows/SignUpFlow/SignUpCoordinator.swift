@@ -62,9 +62,10 @@ private extension SignUpCoordinator {
             
             output.finishModule = {
                 self?.finishFlow?()
+                //self?.router.popToRoot(animated: true)
             }
         }
-        router.setRoot(module, hideBar: true)
+        router.push(module, animated: true, hideBottomBar: true)
     }
 }
 

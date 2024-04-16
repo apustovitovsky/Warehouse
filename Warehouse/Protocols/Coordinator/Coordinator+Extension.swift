@@ -13,5 +13,6 @@ extension Coordinator {
         if let coordinator {
             coordinators = coordinators.filter{ $0 !== coordinator }
         }
+        print(coordinator as Any)
     }
 }
