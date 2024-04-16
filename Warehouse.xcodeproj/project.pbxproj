@@ -13,33 +13,49 @@
 		8A0BB8892BC17F3300AF7326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB8882BC17F3300AF7326 /* SceneDelegate.swift */; };
 		8A0BB8922BC18F1A00AF7326 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB8912BC18F1A00AF7326 /* Coordinator.swift */; };
 		8A0BB8942BC18F8900AF7326 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BB8932BC18F8900AF7326 /* AppCoordinator.swift */; };
-		8A1BE63F2BCC7E3A00B00C8B /* Router+Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1BE63E2BCC7E3A00B00C8B /* Router+Presentable.swift */; };
-		8A1BE6412BCC7EC400B00C8B /* Presentable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1BE6402BCC7EC400B00C8B /* Presentable+UIViewController.swift */; };
-		8A1F73192BC950F600A261BF /* AppTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F73182BC950F600A261BF /* AppTabBarPresenter.swift */; };
-		8A1F731B2BC9510300A261BF /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F731A2BC9510300A261BF /* AppTabBarController.swift */; };
-		8A54E02C2BC6EC7900D307EB /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E02B2BC6EC7900D307EB /* OnboardingCoordinator.swift */; };
-		8A54E02E2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E02D2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift */; };
-		8A54E0312BC6ECC200D307EB /* OnboardingModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0302BC6ECC200D307EB /* OnboardingModuleFactory.swift */; };
-		8A54E0332BC6ECD000D307EB /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0322BC6ECD000D307EB /* OnboardingPresenter.swift */; };
-		8A54E0352BC6ECDF00D307EB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0342BC6ECDF00D307EB /* OnboardingViewController.swift */; };
-		8A54E0532BC8362600D307EB /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0522BC8362600D307EB /* LoginCoordinator.swift */; };
-		8A54E0562BC836D600D307EB /* LoginModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0552BC836D600D307EB /* LoginModuleFactory.swift */; };
+		8A1BE63F2BCC7E3A00B00C8B /* Router+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1BE63E2BCC7E3A00B00C8B /* Router+Extension.swift */; };
+		8A1BE6412BCC7EC400B00C8B /* Presentable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1BE6402BCC7EC400B00C8B /* Presentable+Extension.swift */; };
+		8A54E02C2BC6EC7900D307EB /* TourCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E02B2BC6EC7900D307EB /* TourCoordinator.swift */; };
+		8A54E0312BC6ECC200D307EB /* TourModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0302BC6ECC200D307EB /* TourModuleFactory.swift */; };
+		8A54E0532BC8362600D307EB /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0522BC8362600D307EB /* SignInCoordinator.swift */; };
+		8A54E0562BC836D600D307EB /* SignInModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0552BC836D600D307EB /* SignInModuleFactory.swift */; };
 		8A54E0582BC8370A00D307EB /* EnterUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0572BC8370A00D307EB /* EnterUsernamePresenter.swift */; };
 		8A54E05A2BC8371400D307EB /* EnterUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0592BC8371400D307EB /* EnterUsernameViewController.swift */; };
 		8A54E05D2BC8376B00D307EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E05C2BC8376B00D307EB /* User.swift */; };
 		8A54E05F2BC846A200D307EB /* EnterPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E05E2BC846A200D307EB /* EnterPasswordPresenter.swift */; };
 		8A54E0612BC846B500D307EB /* EnterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0602BC846B500D307EB /* EnterPasswordViewController.swift */; };
-		8A54E0632BC863F700D307EB /* LoginSuccessPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0622BC863F700D307EB /* LoginSuccessPresenter.swift */; };
-		8A54E0652BC8640A00D307EB /* LoginSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0642BC8640A00D307EB /* LoginSuccessViewController.swift */; };
-		8A5D57412BC998880085D9AA /* AppTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D57402BC998880085D9AA /* AppTabBarCoordinator.swift */; };
+		8A54E0632BC863F700D307EB /* SignInSuccessPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0622BC863F700D307EB /* SignInSuccessPresenter.swift */; };
+		8A54E0652BC8640A00D307EB /* SignInSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A54E0642BC8640A00D307EB /* SignInSuccessViewController.swift */; };
+		8A68E0C52BCD9D5500BA5B6D /* Coordinator+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0C42BCD9D5500BA5B6D /* Coordinator+Extension.swift */; };
+		8A68E0C72BCDB61300BA5B6D /* DeepLinkOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0C62BCDB61300BA5B6D /* DeepLinkOptions.swift */; };
+		8A68E0C92BCE6D2000BA5B6D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0C82BCE6D2000BA5B6D /* TabBarController.swift */; };
+		8A68E0CF2BCE8FDE00BA5B6D /* TourStepOnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0CD2BCE8FDE00BA5B6D /* TourStepOnePresenter.swift */; };
+		8A68E0D02BCE8FDE00BA5B6D /* TourStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0CE2BCE8FDE00BA5B6D /* TourStepOneViewController.swift */; };
+		8A68E0D32BCE900100BA5B6D /* TourStepTwoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0D12BCE900100BA5B6D /* TourStepTwoPresenter.swift */; };
+		8A68E0D42BCE900100BA5B6D /* TourStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0D22BCE900100BA5B6D /* TourStepTwoViewController.swift */; };
+		8A68E0D92BCE987800BA5B6D /* OverviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0D72BCE987800BA5B6D /* OverviewPresenter.swift */; };
+		8A68E0DA2BCE987800BA5B6D /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0D82BCE987800BA5B6D /* OverviewViewController.swift */; };
+		8A68E0DC2BCE98D800BA5B6D /* OverviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0DB2BCE98D800BA5B6D /* OverviewCoordinator.swift */; };
+		8A68E0DE2BCE995200BA5B6D /* OverviewModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0DD2BCE995200BA5B6D /* OverviewModuleFactory.swift */; };
+		8A68E0E12BCEA9C600BA5B6D /* SignInCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0E02BCEA9C600BA5B6D /* SignInCoordinatorFactory.swift */; };
+		8A68E0E42BCEDA7100BA5B6D /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0E32BCEDA7100BA5B6D /* SignUpCoordinator.swift */; };
+		8A68E0E62BCEDD2600BA5B6D /* SignUpModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0E52BCEDD2600BA5B6D /* SignUpModuleFactory.swift */; };
+		8A68E0E92BCEDE3800BA5B6D /* TermsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0E72BCEDE3800BA5B6D /* TermsPresenter.swift */; };
+		8A68E0EA2BCEDE3800BA5B6D /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0E82BCEDE3800BA5B6D /* TermsViewController.swift */; };
+		8A68E0ED2BCEDE5900BA5B6D /* CreateUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0EB2BCEDE5900BA5B6D /* CreateUsernamePresenter.swift */; };
+		8A68E0EE2BCEDE5900BA5B6D /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0EC2BCEDE5900BA5B6D /* CreateUsernameViewController.swift */; };
+		8A68E0F12BCEDE6800BA5B6D /* CreatePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0EF2BCEDE6800BA5B6D /* CreatePasswordPresenter.swift */; };
+		8A68E0F22BCEDE6800BA5B6D /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0F02BCEDE6800BA5B6D /* CreatePasswordViewController.swift */; };
+		8A68E0F52BCEDE7900BA5B6D /* SignUpSuccessPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0F32BCEDE7900BA5B6D /* SignUpSuccessPresenter.swift */; };
+		8A68E0F62BCEDE7900BA5B6D /* SignUpSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A68E0F42BCEDE7900BA5B6D /* SignUpSuccessViewController.swift */; };
 		8AF23EE92BC1B189008A3944 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EE82BC1B189008A3944 /* Presentable.swift */; };
 		8AF23EEE2BC1B782008A3944 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23EED2BC1B782008A3944 /* Router.swift */; };
 		8AF23F032BC2A1AC008A3944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F022BC2A1AC008A3944 /* ViewController.swift */; };
 		8AF23F052BC2A2EB008A3944 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F042BC2A2EB008A3944 /* Presenter.swift */; };
 		8AF23F222BC4575F008A3944 /* AppCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F212BC4575F008A3944 /* AppCoordinatorFactory.swift */; };
-		8AF23F292BC4688C008A3944 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F282BC4688C008A3944 /* MainTabBarCoordinator.swift */; };
-		8AF23F2B2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F2A2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift */; };
-		8AF23F2D2BC46F97008A3944 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F2C2BC46F97008A3944 /* MainTabBarController.swift */; };
+		8AF23F292BC4688C008A3944 /* AppTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F282BC4688C008A3944 /* AppTabBarCoordinator.swift */; };
+		8AF23F2B2BC46913008A3944 /* AppTabBarCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F2A2BC46913008A3944 /* AppTabBarCoordinatorFactory.swift */; };
+		8AF23F2D2BC46F97008A3944 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF23F2C2BC46F97008A3944 /* AppTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,33 +67,49 @@
 		8A0BB8882BC17F3300AF7326 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8A0BB8912BC18F1A00AF7326 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8A0BB8932BC18F8900AF7326 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		8A1BE63E2BCC7E3A00B00C8B /* Router+Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Presentable.swift"; sourceTree = "<group>"; };
-		8A1BE6402BCC7EC400B00C8B /* Presentable+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presentable+UIViewController.swift"; sourceTree = "<group>"; };
-		8A1F73182BC950F600A261BF /* AppTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarPresenter.swift; sourceTree = "<group>"; };
-		8A1F731A2BC9510300A261BF /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
-		8A54E02B2BC6EC7900D307EB /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
-		8A54E02D2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorFactory.swift; sourceTree = "<group>"; };
-		8A54E0302BC6ECC200D307EB /* OnboardingModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModuleFactory.swift; sourceTree = "<group>"; };
-		8A54E0322BC6ECD000D307EB /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
-		8A54E0342BC6ECDF00D307EB /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		8A54E0522BC8362600D307EB /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		8A54E0552BC836D600D307EB /* LoginModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleFactory.swift; sourceTree = "<group>"; };
+		8A1BE63E2BCC7E3A00B00C8B /* Router+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+Extension.swift"; sourceTree = "<group>"; };
+		8A1BE6402BCC7EC400B00C8B /* Presentable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Presentable+Extension.swift"; sourceTree = "<group>"; };
+		8A54E02B2BC6EC7900D307EB /* TourCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourCoordinator.swift; sourceTree = "<group>"; };
+		8A54E0302BC6ECC200D307EB /* TourModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourModuleFactory.swift; sourceTree = "<group>"; };
+		8A54E0522BC8362600D307EB /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		8A54E0552BC836D600D307EB /* SignInModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModuleFactory.swift; sourceTree = "<group>"; };
 		8A54E0572BC8370A00D307EB /* EnterUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUsernamePresenter.swift; sourceTree = "<group>"; };
 		8A54E0592BC8371400D307EB /* EnterUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUsernameViewController.swift; sourceTree = "<group>"; };
 		8A54E05C2BC8376B00D307EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8A54E05E2BC846A200D307EB /* EnterPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordPresenter.swift; sourceTree = "<group>"; };
 		8A54E0602BC846B500D307EB /* EnterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordViewController.swift; sourceTree = "<group>"; };
-		8A54E0622BC863F700D307EB /* LoginSuccessPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessPresenter.swift; sourceTree = "<group>"; };
-		8A54E0642BC8640A00D307EB /* LoginSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessViewController.swift; sourceTree = "<group>"; };
-		8A5D57402BC998880085D9AA /* AppTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarCoordinator.swift; sourceTree = "<group>"; };
+		8A54E0622BC863F700D307EB /* SignInSuccessPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSuccessPresenter.swift; sourceTree = "<group>"; };
+		8A54E0642BC8640A00D307EB /* SignInSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSuccessViewController.swift; sourceTree = "<group>"; };
+		8A68E0C42BCD9D5500BA5B6D /* Coordinator+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+Extension.swift"; sourceTree = "<group>"; };
+		8A68E0C62BCDB61300BA5B6D /* DeepLinkOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkOptions.swift; sourceTree = "<group>"; };
+		8A68E0C82BCE6D2000BA5B6D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8A68E0CD2BCE8FDE00BA5B6D /* TourStepOnePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourStepOnePresenter.swift; sourceTree = "<group>"; };
+		8A68E0CE2BCE8FDE00BA5B6D /* TourStepOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourStepOneViewController.swift; sourceTree = "<group>"; };
+		8A68E0D12BCE900100BA5B6D /* TourStepTwoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourStepTwoPresenter.swift; sourceTree = "<group>"; };
+		8A68E0D22BCE900100BA5B6D /* TourStepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourStepTwoViewController.swift; sourceTree = "<group>"; };
+		8A68E0D72BCE987800BA5B6D /* OverviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewPresenter.swift; sourceTree = "<group>"; };
+		8A68E0D82BCE987800BA5B6D /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		8A68E0DB2BCE98D800BA5B6D /* OverviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCoordinator.swift; sourceTree = "<group>"; };
+		8A68E0DD2BCE995200BA5B6D /* OverviewModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewModuleFactory.swift; sourceTree = "<group>"; };
+		8A68E0E02BCEA9C600BA5B6D /* SignInCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8A68E0E32BCEDA7100BA5B6D /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		8A68E0E52BCEDD2600BA5B6D /* SignUpModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModuleFactory.swift; sourceTree = "<group>"; };
+		8A68E0E72BCEDE3800BA5B6D /* TermsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsPresenter.swift; sourceTree = "<group>"; };
+		8A68E0E82BCEDE3800BA5B6D /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		8A68E0EB2BCEDE5900BA5B6D /* CreateUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernamePresenter.swift; sourceTree = "<group>"; };
+		8A68E0EC2BCEDE5900BA5B6D /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		8A68E0EF2BCEDE6800BA5B6D /* CreatePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordPresenter.swift; sourceTree = "<group>"; };
+		8A68E0F02BCEDE6800BA5B6D /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
+		8A68E0F32BCEDE7900BA5B6D /* SignUpSuccessPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSuccessPresenter.swift; sourceTree = "<group>"; };
+		8A68E0F42BCEDE7900BA5B6D /* SignUpSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSuccessViewController.swift; sourceTree = "<group>"; };
 		8AF23EE82BC1B189008A3944 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		8AF23EED2BC1B782008A3944 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8AF23F022BC2A1AC008A3944 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8AF23F042BC2A2EB008A3944 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		8AF23F212BC4575F008A3944 /* AppCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactory.swift; sourceTree = "<group>"; };
-		8AF23F282BC4688C008A3944 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
-		8AF23F2A2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinatorFactory.swift; sourceTree = "<group>"; };
-		8AF23F2C2BC46F97008A3944 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8AF23F282BC4688C008A3944 /* AppTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarCoordinator.swift; sourceTree = "<group>"; };
+		8AF23F2A2BC46913008A3944 /* AppTabBarCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8AF23F2C2BC46F97008A3944 /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +174,11 @@
 		8A0BB88A2BC180BF00AF7326 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				8AF23EFF2BC1FCF1008A3944 /* Application */,
-				8A54E0512BC8361100D307EB /* LoginFlow */,
-				8A54E02A2BC6EC2800D307EB /* OnboardingFlow */,
-				8AF23F232BC4670D008A3944 /* TabBarFlow */,
+				8AF23EFF2BC1FCF1008A3944 /* App */,
+				8A54E02A2BC6EC2800D307EB /* TourFlow */,
+				8A54E0512BC8361100D307EB /* SignInFlow */,
+				8A68E0D52BCE96AF00BA5B6D /* SignUpFlow */,
+				8A68E0CC2BCE7BBA00BA5B6D /* OverviewFlow */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -154,49 +187,41 @@
 			isa = PBXGroup;
 			children = (
 				8AF23EED2BC1B782008A3944 /* Router.swift */,
-				8A1BE63E2BCC7E3A00B00C8B /* Router+Presentable.swift */,
+				8A1BE63E2BCC7E3A00B00C8B /* Router+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		8A1F73162BC950AF00A261BF /* Modules */ = {
+		8A54E02A2BC6EC2800D307EB /* TourFlow */ = {
 			isa = PBXGroup;
 			children = (
-				8AF23F2C2BC46F97008A3944 /* MainTabBarController.swift */,
-				8A1F73182BC950F600A261BF /* AppTabBarPresenter.swift */,
-				8A1F731A2BC9510300A261BF /* AppTabBarController.swift */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		8A54E02A2BC6EC2800D307EB /* OnboardingFlow */ = {
-			isa = PBXGroup;
-			children = (
-				8A54E02B2BC6EC7900D307EB /* OnboardingCoordinator.swift */,
-				8A54E02D2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift */,
-				8A54E0302BC6ECC200D307EB /* OnboardingModuleFactory.swift */,
+				8A54E02B2BC6EC7900D307EB /* TourCoordinator.swift */,
+				8A54E0302BC6ECC200D307EB /* TourModuleFactory.swift */,
 				8A54E02F2BC6EC8900D307EB /* Modules */,
 			);
-			path = OnboardingFlow;
+			path = TourFlow;
 			sourceTree = "<group>";
 		};
 		8A54E02F2BC6EC8900D307EB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				8A54E0322BC6ECD000D307EB /* OnboardingPresenter.swift */,
-				8A54E0342BC6ECDF00D307EB /* OnboardingViewController.swift */,
+				8A68E0CD2BCE8FDE00BA5B6D /* TourStepOnePresenter.swift */,
+				8A68E0CE2BCE8FDE00BA5B6D /* TourStepOneViewController.swift */,
+				8A68E0D12BCE900100BA5B6D /* TourStepTwoPresenter.swift */,
+				8A68E0D22BCE900100BA5B6D /* TourStepTwoViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		8A54E0512BC8361100D307EB /* LoginFlow */ = {
+		8A54E0512BC8361100D307EB /* SignInFlow */ = {
 			isa = PBXGroup;
 			children = (
-				8A54E0522BC8362600D307EB /* LoginCoordinator.swift */,
-				8A54E0552BC836D600D307EB /* LoginModuleFactory.swift */,
+				8A54E0522BC8362600D307EB /* SignInCoordinator.swift */,
+				8A68E0E02BCEA9C600BA5B6D /* SignInCoordinatorFactory.swift */,
+				8A54E0552BC836D600D307EB /* SignInModuleFactory.swift */,
 				8A54E0542BC8363300D307EB /* Modules */,
 			);
-			path = LoginFlow;
+			path = SignInFlow;
 			sourceTree = "<group>";
 		};
 		8A54E0542BC8363300D307EB /* Modules */ = {
@@ -206,8 +231,8 @@
 				8A54E0592BC8371400D307EB /* EnterUsernameViewController.swift */,
 				8A54E05E2BC846A200D307EB /* EnterPasswordPresenter.swift */,
 				8A54E0602BC846B500D307EB /* EnterPasswordViewController.swift */,
-				8A54E0622BC863F700D307EB /* LoginSuccessPresenter.swift */,
-				8A54E0642BC8640A00D307EB /* LoginSuccessViewController.swift */,
+				8A54E0622BC863F700D307EB /* SignInSuccessPresenter.swift */,
+				8A54E0642BC8640A00D307EB /* SignInSuccessViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -220,36 +245,99 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8AF23EEA2BC1B190008A3944 /* Protocols */ = {
+		8A68E0CA2BCE6E1600BA5B6D /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				8A0BB8912BC18F1A00AF7326 /* Coordinator.swift */,
+				8A68E0C42BCD9D5500BA5B6D /* Coordinator+Extension.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8A68E0CB2BCE6E3900BA5B6D /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				8AF23EE82BC1B189008A3944 /* Presentable.swift */,
+				8A1BE6402BCC7EC400B00C8B /* Presentable+Extension.swift */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		8A68E0CC2BCE7BBA00BA5B6D /* OverviewFlow */ = {
+			isa = PBXGroup;
+			children = (
+				8A68E0DB2BCE98D800BA5B6D /* OverviewCoordinator.swift */,
+				8A68E0DD2BCE995200BA5B6D /* OverviewModuleFactory.swift */,
+				8A68E0D62BCE985500BA5B6D /* Modules */,
+			);
+			path = OverviewFlow;
+			sourceTree = "<group>";
+		};
+		8A68E0D52BCE96AF00BA5B6D /* SignUpFlow */ = {
+			isa = PBXGroup;
+			children = (
+				8A68E0E32BCEDA7100BA5B6D /* SignUpCoordinator.swift */,
+				8A68E0E52BCEDD2600BA5B6D /* SignUpModuleFactory.swift */,
+				8A68E0E22BCED9FA00BA5B6D /* Modules */,
+			);
+			path = SignUpFlow;
+			sourceTree = "<group>";
+		};
+		8A68E0D62BCE985500BA5B6D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8A68E0D72BCE987800BA5B6D /* OverviewPresenter.swift */,
+				8A68E0D82BCE987800BA5B6D /* OverviewViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8A68E0E22BCED9FA00BA5B6D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8A68E0E72BCEDE3800BA5B6D /* TermsPresenter.swift */,
+				8A68E0E82BCEDE3800BA5B6D /* TermsViewController.swift */,
+				8A68E0EB2BCEDE5900BA5B6D /* CreateUsernamePresenter.swift */,
+				8A68E0EC2BCEDE5900BA5B6D /* CreateUsernameViewController.swift */,
+				8A68E0EF2BCEDE6800BA5B6D /* CreatePasswordPresenter.swift */,
+				8A68E0F02BCEDE6800BA5B6D /* CreatePasswordViewController.swift */,
+				8A68E0F32BCEDE7900BA5B6D /* SignUpSuccessPresenter.swift */,
+				8A68E0F42BCEDE7900BA5B6D /* SignUpSuccessViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8AF23EEA2BC1B190008A3944 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8A68E0CB2BCE6E3900BA5B6D /* Presentable */,
+				8A68E0CA2BCE6E1600BA5B6D /* Coordinator */,
 				8AF23F042BC2A2EB008A3944 /* Presenter.swift */,
 				8AF23F022BC2A1AC008A3944 /* ViewController.swift */,
-				8AF23EE82BC1B189008A3944 /* Presentable.swift */,
-				8A1BE6402BCC7EC400B00C8B /* Presentable+UIViewController.swift */,
+				8A68E0C82BCE6D2000BA5B6D /* TabBarController.swift */,
+				8A68E0C62BCDB61300BA5B6D /* DeepLinkOptions.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		8AF23EFF2BC1FCF1008A3944 /* Application */ = {
+		8AF23EFF2BC1FCF1008A3944 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				8A0BB8932BC18F8900AF7326 /* AppCoordinator.swift */,
 				8AF23F212BC4575F008A3944 /* AppCoordinatorFactory.swift */,
+				8AF23F232BC4670D008A3944 /* AppTabBar */,
 			);
-			path = Application;
+			path = App;
 			sourceTree = "<group>";
 		};
-		8AF23F232BC4670D008A3944 /* TabBarFlow */ = {
+		8AF23F232BC4670D008A3944 /* AppTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				8A1F73162BC950AF00A261BF /* Modules */,
-				8AF23F2A2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift */,
-				8AF23F282BC4688C008A3944 /* MainTabBarCoordinator.swift */,
-				8A5D57402BC998880085D9AA /* AppTabBarCoordinator.swift */,
+				8AF23F282BC4688C008A3944 /* AppTabBarCoordinator.swift */,
+				8AF23F2A2BC46913008A3944 /* AppTabBarCoordinatorFactory.swift */,
+				8AF23F2C2BC46F97008A3944 /* AppTabBarController.swift */,
 			);
-			path = TabBarFlow;
+			path = AppTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,37 +410,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AF23F292BC4688C008A3944 /* MainTabBarCoordinator.swift in Sources */,
-				8A1BE6412BCC7EC400B00C8B /* Presentable+UIViewController.swift in Sources */,
+				8AF23F292BC4688C008A3944 /* AppTabBarCoordinator.swift in Sources */,
+				8A1BE6412BCC7EC400B00C8B /* Presentable+Extension.swift in Sources */,
+				8A68E0C52BCD9D5500BA5B6D /* Coordinator+Extension.swift in Sources */,
 				8A54E05F2BC846A200D307EB /* EnterPasswordPresenter.swift in Sources */,
-				8AF23F2D2BC46F97008A3944 /* MainTabBarController.swift in Sources */,
-				8A1F731B2BC9510300A261BF /* AppTabBarController.swift in Sources */,
+				8A68E0D32BCE900100BA5B6D /* TourStepTwoPresenter.swift in Sources */,
+				8A68E0E62BCEDD2600BA5B6D /* SignUpModuleFactory.swift in Sources */,
+				8A68E0D42BCE900100BA5B6D /* TourStepTwoViewController.swift in Sources */,
+				8AF23F2D2BC46F97008A3944 /* AppTabBarController.swift in Sources */,
 				8A54E0612BC846B500D307EB /* EnterPasswordViewController.swift in Sources */,
-				8A1F73192BC950F600A261BF /* AppTabBarPresenter.swift in Sources */,
-				8A54E0532BC8362600D307EB /* LoginCoordinator.swift in Sources */,
+				8A54E0532BC8362600D307EB /* SignInCoordinator.swift in Sources */,
+				8A68E0ED2BCEDE5900BA5B6D /* CreateUsernamePresenter.swift in Sources */,
+				8A68E0EE2BCEDE5900BA5B6D /* CreateUsernameViewController.swift in Sources */,
 				8A54E05A2BC8371400D307EB /* EnterUsernameViewController.swift in Sources */,
 				8AF23F222BC4575F008A3944 /* AppCoordinatorFactory.swift in Sources */,
 				8A54E05D2BC8376B00D307EB /* User.swift in Sources */,
 				8A0BB8942BC18F8900AF7326 /* AppCoordinator.swift in Sources */,
-				8A54E0632BC863F700D307EB /* LoginSuccessPresenter.swift in Sources */,
+				8A68E0E12BCEA9C600BA5B6D /* SignInCoordinatorFactory.swift in Sources */,
+				8A54E0632BC863F700D307EB /* SignInSuccessPresenter.swift in Sources */,
 				8AF23F032BC2A1AC008A3944 /* ViewController.swift in Sources */,
 				8AF23EE92BC1B189008A3944 /* Presentable.swift in Sources */,
-				8A54E0652BC8640A00D307EB /* LoginSuccessViewController.swift in Sources */,
-				8A54E02C2BC6EC7900D307EB /* OnboardingCoordinator.swift in Sources */,
-				8A5D57412BC998880085D9AA /* AppTabBarCoordinator.swift in Sources */,
+				8A68E0C72BCDB61300BA5B6D /* DeepLinkOptions.swift in Sources */,
+				8A68E0E42BCEDA7100BA5B6D /* SignUpCoordinator.swift in Sources */,
+				8A68E0F12BCEDE6800BA5B6D /* CreatePasswordPresenter.swift in Sources */,
+				8A68E0F22BCEDE6800BA5B6D /* CreatePasswordViewController.swift in Sources */,
+				8A68E0C92BCE6D2000BA5B6D /* TabBarController.swift in Sources */,
+				8A68E0D92BCE987800BA5B6D /* OverviewPresenter.swift in Sources */,
+				8A68E0DA2BCE987800BA5B6D /* OverviewViewController.swift in Sources */,
+				8A54E0652BC8640A00D307EB /* SignInSuccessViewController.swift in Sources */,
+				8A54E02C2BC6EC7900D307EB /* TourCoordinator.swift in Sources */,
 				8AF23EEE2BC1B782008A3944 /* Router.swift in Sources */,
-				8A54E0352BC6ECDF00D307EB /* OnboardingViewController.swift in Sources */,
 				8A54E0582BC8370A00D307EB /* EnterUsernamePresenter.swift in Sources */,
-				8A1BE63F2BCC7E3A00B00C8B /* Router+Presentable.swift in Sources */,
+				8A1BE63F2BCC7E3A00B00C8B /* Router+Extension.swift in Sources */,
+				8A68E0CF2BCE8FDE00BA5B6D /* TourStepOnePresenter.swift in Sources */,
+				8A68E0D02BCE8FDE00BA5B6D /* TourStepOneViewController.swift in Sources */,
 				8AF23F052BC2A2EB008A3944 /* Presenter.swift in Sources */,
-				8A54E0332BC6ECD000D307EB /* OnboardingPresenter.swift in Sources */,
-				8AF23F2B2BC46913008A3944 /* MainTabBarCoordinatorFactory.swift in Sources */,
+				8AF23F2B2BC46913008A3944 /* AppTabBarCoordinatorFactory.swift in Sources */,
+				8A68E0E92BCEDE3800BA5B6D /* TermsPresenter.swift in Sources */,
+				8A68E0EA2BCEDE3800BA5B6D /* TermsViewController.swift in Sources */,
 				8A0BB8922BC18F1A00AF7326 /* Coordinator.swift in Sources */,
-				8A54E02E2BC6EC8600D307EB /* OnboardingCoordinatorFactory.swift in Sources */,
+				8A68E0DE2BCE995200BA5B6D /* OverviewModuleFactory.swift in Sources */,
+				8A68E0F52BCEDE7900BA5B6D /* SignUpSuccessPresenter.swift in Sources */,
+				8A68E0F62BCEDE7900BA5B6D /* SignUpSuccessViewController.swift in Sources */,
+				8A68E0DC2BCE98D800BA5B6D /* OverviewCoordinator.swift in Sources */,
 				8A0BB8732BC17C5400AF7326 /* AppDelegate.swift in Sources */,
-				8A54E0562BC836D600D307EB /* LoginModuleFactory.swift in Sources */,
+				8A54E0562BC836D600D307EB /* SignInModuleFactory.swift in Sources */,
 				8A0BB8892BC17F3300AF7326 /* SceneDelegate.swift in Sources */,
-				8A54E0312BC6ECC200D307EB /* OnboardingModuleFactory.swift in Sources */,
+				8A54E0312BC6ECC200D307EB /* TourModuleFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
