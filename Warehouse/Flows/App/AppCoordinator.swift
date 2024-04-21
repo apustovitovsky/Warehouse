@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 
 final class AppCoordinator: Coordinator {
@@ -8,8 +9,8 @@ final class AppCoordinator: Coordinator {
     private let coordinatorFactory: AppCoordinatorFactoryProtocol
     
     //MARK: Initial App State
-    private var isAuthenticated: Bool = false
-    private var isTourCompleted: Bool = false
+    private var isAuthenticated: Bool = true
+    private var isTourCompleted: Bool = true
     
     init(router: Router,
          coordinatorFactory: AppCoordinatorFactoryProtocol) {
@@ -26,6 +27,20 @@ final class AppCoordinator: Coordinator {
             }
         } else {
             showAuthFlow()
+        }
+    }
+    
+    func start(with option: DeepLinkOption?) {
+        if let option {
+            switch option {
+            case .overview: showMainFlow()
+            default:
+                coordinators.forEach { coordinator in
+                    coordinator.start(with: option)
+                }
+            }
+        } else {
+            start()
         }
     }
 }
@@ -59,7 +74,7 @@ private extension AppCoordinator {
         let (module, coordinator) = AppCoordinatorFactory().makeMainTabBarCoordinator()
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.isAuthenticated = false
-            self?.showAuthFlow()
+            self?.start()
             self?.remove(coordinator)
         }
         add(coordinator)

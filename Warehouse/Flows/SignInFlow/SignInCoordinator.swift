@@ -28,8 +28,10 @@ final class SignInCoordinator: Coordinator, SignInCoordinatorOutput {
     func start() {
         showEnterUsername()
     }
+    
+    func start(with option: DeepLinkOption?) {
+    }
 }
-
 
 private extension SignInCoordinator {
     

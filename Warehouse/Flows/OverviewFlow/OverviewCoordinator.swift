@@ -27,6 +27,9 @@ final class OverviewCoordinator: Coordinator, OverviewCoordinatorOutput {
     func start() {
         showOverviewModule()
     }
+    
+    func start(with option: DeepLinkOption?) {
+    }
 }
 
 private extension OverviewCoordinator {

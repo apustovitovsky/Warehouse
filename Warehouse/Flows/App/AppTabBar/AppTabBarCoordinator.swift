@@ -25,6 +25,9 @@ final class AppTabBarCoordinator: Coordinator, AppTabBarCoordinatorOutput {
         makeProgressFlow()
         makeSettingsFlow()
     }
+    
+    func start(with option: DeepLinkOption?) {
+    }
 }
 
 private extension AppTabBarCoordinator {

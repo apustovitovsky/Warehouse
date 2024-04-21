@@ -24,6 +24,9 @@ final class TourCoordinator: Coordinator, TourCoordinatorOutput {
     func start() {
         showTourStepOneModule()
     }
+    
+    func start(with option: DeepLinkOption?) {
+    }
 }
 
 

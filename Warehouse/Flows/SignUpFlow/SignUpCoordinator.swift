@@ -23,6 +23,9 @@ final class SignUpCoordinator: Coordinator, SignUpCoordinatorOutput {
     func start() {
         showTerms()
     }
+    
+    func start(with option: DeepLinkOption?) {
+    }
 }
 
 private extension SignUpCoordinator {
@@ -62,7 +65,6 @@ private extension SignUpCoordinator {
             
             output.finishModule = {
                 self?.finishFlow?()
-                //self?.router.popToRoot(animated: true)
             }
         }
         router.push(module, animated: true, hideBottomBar: true)
