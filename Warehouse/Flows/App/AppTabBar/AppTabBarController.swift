@@ -9,6 +9,10 @@ protocol AppTabBarControllerOutput: AnyObject {
     var makeSettingsFlow: ((UINavigationController) -> Void)? { get set }
 }
 
+protocol AppTabBarControllerInput: AnyObject {
+    func setSelectedIndex(to value: Int)
+}
+
 final class AppTabBarController: UITabBarController, TabBarController, AppTabBarControllerOutput {
 
     var makeOverviewFlow: ((UINavigationController) -> ())?
@@ -71,5 +75,11 @@ extension AppTabBarController: UITabBarControllerDelegate {
         case 3: makeSettingsFlow?(controller)
         default: return
         }
+    }
+}
+
+extension AppTabBarController: AppTabBarControllerInput {
+    func setSelectedIndex(to value: Int) {
+        selectedIndex = value
     }
 }

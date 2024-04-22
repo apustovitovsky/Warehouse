@@ -50,6 +50,12 @@ struct Router {
         rootController?.isNavigationBarHidden = hideBar
     }
     
+    func setRoot(_ controller: Presentable?, hideBar: Bool, animated: Bool) {
+        guard let controller = controller?.toPresent() else { return }
+        rootController?.setViewControllers([controller], animated: animated)
+        rootController?.isNavigationBarHidden = hideBar
+    }
+    
     func popToRoot(animated: Bool) {
         rootController?.popToRootViewController(animated: animated)
     }

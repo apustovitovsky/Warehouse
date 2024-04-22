@@ -7,7 +7,6 @@ protocol AppTabBarCoordinatorOutput: AnyObject {
 
 final class AppTabBarCoordinator: Coordinator, AppTabBarCoordinatorOutput {
     
-    var coordinators: [Coordinator] = []
     var finishFlow: (() -> Void)?
     private let controller: AppTabBarControllerOutput
     private let coordinatorFactory: AppTabBarCoordinatorFactoryProtocol
@@ -19,14 +18,15 @@ final class AppTabBarCoordinator: Coordinator, AppTabBarCoordinatorOutput {
         self.coordinatorFactory = coordinatorFactory
     }
     
-    func start() {
+    override func start() {
         makeOverviewFlow()
         makeSessionsFlow()
         makeProgressFlow()
         makeSettingsFlow()
     }
     
-    func start(with option: DeepLinkOption?) {
+    override func start(with option: String?) {
+
     }
 }
 

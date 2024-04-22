@@ -4,51 +4,51 @@ import Combine
 
 final class AppCoordinator: Coordinator {
     
-    var coordinators: [Coordinator] = []
     private let router: Router
     private let coordinatorFactory: AppCoordinatorFactoryProtocol
     
-    //MARK: Initial App State
     private var isAuthenticated: Bool = true
     private var isTourCompleted: Bool = true
     
     init(router: Router,
          coordinatorFactory: AppCoordinatorFactoryProtocol) {
+        
         self.router = router
         self.coordinatorFactory = coordinatorFactory
+        super.init()
+        
+        bindDeepLink()
     }
     
-    func start() {
-        if isAuthenticated {
-            if isTourCompleted {
-                showMainFlow()
-            } else {
-                showTourFlow()
-            }
-        } else {
-            showAuthFlow()
-        }
-    }
-    
-    func start(with option: DeepLinkOption?) {
-        if let option {
-            switch option {
-            case .overview: showMainFlow()
-            default:
-                coordinators.forEach { coordinator in
-                    coordinator.start(with: option)
+    func bindDeepLink() {
+        deepLinkSubject
+            .unwrap()
+            .map(AppFlow.init(deeplink:))
+            .unwrap()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] deeplink in
+                guard let self else { return }
+                switch deeplink {
+                case .auth: self.showAuth()
+                case .home: self.showMain()
                 }
+                self.resetDeeplink()
             }
-        } else {
-            start()
-        }
+            .store(in: &disposeBag)
+    }
+    
+    override func start() {
+    }
+    
+    override func start(with option: String?) {
+        deepLinkSubject.send(option)
     }
 }
 
 
 private extension AppCoordinator {
     
-    func showTourFlow() {
+    func showTour() {
         let coordinator = coordinatorFactory.makeTourCoordinator(with: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.isTourCompleted = true
@@ -59,7 +59,7 @@ private extension AppCoordinator {
         coordinator.start()
     }
     
-    func showAuthFlow() {
+    func showAuth() {
         let coordinator = coordinatorFactory.makeAuthCoordinator(with: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.isAuthenticated = true
@@ -67,10 +67,10 @@ private extension AppCoordinator {
             self?.remove(coordinator)
         }
         add(coordinator)
-        coordinator.start()
+        print(coordinators.count)
     }
     
-    func showMainFlow() {
+    func showMain() {
         let (module, coordinator) = AppCoordinatorFactory().makeMainTabBarCoordinator()
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.isAuthenticated = false

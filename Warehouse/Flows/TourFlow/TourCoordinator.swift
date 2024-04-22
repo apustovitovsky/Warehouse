@@ -8,7 +8,6 @@ protocol TourCoordinatorOutput: AnyObject {
 
 final class TourCoordinator: Coordinator, TourCoordinatorOutput {
     
-    var coordinators: [Coordinator] = []
     var finishFlow: (() -> Void)?
 
     private let router: Router
@@ -21,11 +20,11 @@ final class TourCoordinator: Coordinator, TourCoordinatorOutput {
         self.moduleFactory = moduleFactory
     }
     
-    func start() {
+    override func start() {
         showTourStepOneModule()
     }
     
-    func start(with option: DeepLinkOption?) {
+    override func start(with option: String?) {
     }
 }
 

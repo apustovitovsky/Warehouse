@@ -7,8 +7,7 @@ protocol OverviewCoordinatorOutput: AnyObject {
 
 
 final class OverviewCoordinator: Coordinator, OverviewCoordinatorOutput {
-    
-    var coordinators: [Coordinator] = []
+
     var finishFlow: (() -> Void)?
 
     private let label: String
@@ -24,11 +23,11 @@ final class OverviewCoordinator: Coordinator, OverviewCoordinatorOutput {
         self.moduleFactory = moduleFactory
     }
     
-    func start() {
+    override func start() {
         showOverviewModule()
     }
     
-    func start(with option: DeepLinkOption?) {
+    override func start(with option: String?) {
     }
 }
 

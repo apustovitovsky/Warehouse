@@ -6,8 +6,7 @@ protocol SignInCoordinatorOutput: AnyObject {
 }
 
 final class SignInCoordinator: Coordinator, SignInCoordinatorOutput {
-    
-    var coordinators: [Coordinator] = []
+
     var finishFlow: (() -> Void)?
     
     private let router: Router
@@ -23,13 +22,32 @@ final class SignInCoordinator: Coordinator, SignInCoordinatorOutput {
         self.router = router
         self.moduleFactory = moduleFactory
         self.coordinatorFactory = coordinatorFactory
+        super.init()
+        
+        bindDeepLink()
     }
     
-    func start() {
-        showEnterUsername()
+    func bindDeepLink() {
+        deepLinkSubject
+            .unwrap()
+            .map(AuthFlow.init(deeplink:))
+            .unwrap()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] deeplink in
+                guard let self else { return }
+                switch deeplink {
+                case .login: self.showEnterUsername()
+                case .register: self.showSignUp()
+                }
+                self.resetDeeplink()
+            }
+            .store(in: &disposeBag)
     }
     
-    func start(with option: DeepLinkOption?) {
+    override func start() {
+    }
+    
+    override func start(with option: String?) {
     }
 }
 
@@ -53,7 +71,7 @@ private extension SignInCoordinator {
     func showSignUp() {
         let coordinator = coordinatorFactory.makeSignUpCoordinator(with: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
-            self?.router.popTo(self?.enterUsernameModule, animated: true)
+            self?.router.setRoot(self?.enterUsernameModule, hideBar: false, animated: true)
             self?.remove(coordinator)
         }
         add(coordinator)

@@ -6,8 +6,7 @@ protocol SignUpCoordinatorOutput: AnyObject {
 }
 
 final class SignUpCoordinator: Coordinator, SignUpCoordinatorOutput {
-    
-    var coordinators: [Coordinator] = []
+
     var finishFlow: (() -> Void)?
     
     private let router: Router
@@ -20,11 +19,11 @@ final class SignUpCoordinator: Coordinator, SignUpCoordinatorOutput {
         self.moduleFactory = moduleFactory
     }
     
-    func start() {
+    override func start() {
         showTerms()
     }
     
-    func start(with option: DeepLinkOption?) {
+    override func start(with option: String?) {
     }
 }
 
